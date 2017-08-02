@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+.log,.reg{padding:8px 30px 0;}
+.log li,.reg li{min-height: 29px;padding:8px 0;border-bottom:1px solid #D0D0D0;}
+.log li label,.reg li label{width:70px;line-height:29px;text-align:center; display:inline-block; font-size:1em; color:#444444; padding-right:4px;border-right:1px solid #D0D0D0;}
+.log li input,.reg li input{width:60%;height:16px;line-height:16px;padding:6px; font-size:1em;color:#a9a8a8; border:0 none;font-family:\5FAE\8F6F\96C5\9ED1; vertical-align:top;}
+.pt50{padding-top:24px;}
+.log-btn,.reg-btn,.cancel-btn{width:100%;height:38px; line-height:38px; font-size:1em;color:#fff;border:1px solid #185ba6; background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#00A2CA), to(#2c82dc));background:-moz-linear-gradient(0% 0% 270deg, rgb(71, 147, 230), rgb(44, 130, 220)); cursor:pointer; border-radius:5px; box-shadow:0 1px 1px #fff inset;-webkit-appearance: none;}
+.log-acc{line-height:42px;color:#666; font-size:0.875em;}
+.reg li label i{color:#d7000f;margin:0 5px 0 -13px;display:inline-block;}
+.reg li{position:relative;}
+.reg li input{font-size:0.625em;}
+.log li input.verify-input,.reg li input.verify-input{width:38%;}
+/*.input-hint{line-height:20px;font-size:12px; color:#a9a8a8; position:absolute;left:86px;top:2px; white-space:nowrap; cursor:pointer;}*/
+.ask-for{padding-left:8px;display:inline-block;}
+.ask-for img{width:40px; vertical-align:middle; margin-top:-6px;}
+/*.ask-btn{width:81px;height:36px; line-height:36px;border:1px solid #c4c4c4; border-radius:6px; font-size:14px; color:#969292; text-shadow:0 1px 1px #fff; display:inline-block; text-align:center;background:-moz-linear-gradient(0% 0% 270deg, #f1f1f1,#e6e6e6);background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#f1f1f1), to(#e6e6e6));box-shadow:0 2px 1px #fff inset;}*/
+.reg-clause{padding:8px 0 12px;line-height:18px; font-size:0.8125em;}
+.reg-clause a{color:#007afe; margin-left:10px;}
+.reg-clause input{margin:-3px 10px 0 0; vertical-align:middle;}
+.reg-btn{width:45%;}
+.cancel-btn{width:45%;border-color:#ed3d00;box-shadow:0 1px 1px #ffb15e inset;background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#ff8400), to(#e36c0a));background:-moz-linear-gradient(0% 0% 270deg, #ff8400,#e36c0a); display:inline-block;}
+.ml24{margin-left:12px;}
+.pb22{padding-bottom:10px;}
+.offLog-btn input,.offLog-btn .cancel-btn{width:122px;}
+
+.err-cpm{width:280px;height:76px; padding-top:18px; background:rgba(0,0,0,0.65); border-radius:8px; position:absolute;top:12%;left:50%; margin-left:-140px;}
+.err-cir{width:26px;height:26px;border:3px solid #fff; border-radius:50px; margin:0 auto;}
+.err-alert,.err-point{width:4px;height:13px; background:#fff;border-radius:50px; display:block; margin:3px auto 0;}
+.err-point{width:4px;height:4px;}
+.err-info{line-height:36px; font-size:0.875em; color:#fff;}
+
+.verify-phone{padding:8px 10px 0;}
+.verify-phone li input{font-size:0.875em;vertical-align:middle;}
+.verify{display:inline-block;}
+.verify a{width:82px;height:37px; line-height:37px; font-size:1em;color:#fff;border:1px solid #185ba6;background:#2c82dc;background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#4793e6), to(#2c82dc));background:-moz-linear-gradient(0% 0% 270deg, rgb(71, 147, 230), rgb(44, 130, 220));cursor:pointer; border-radius:5px; box-shadow:0 1px 1px #fff inset; display:inline-block;}
+.verify-phone li label{vertical-align:middle;}
+.verify-phone li input.verify-input{width:43%;font-size:0.625em;}
+.verify-phone .reg-btn{width:60%;}
+.verify-phone .cancel-btn{width:30%;}
+.verify-phone .reg-clause{font-size:0.75em;}
+

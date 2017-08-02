@@ -1,0 +1,427 @@
+﻿@charset "UTF-8";
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    cursor:default;
+}
+a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+body{
+    position: relative;
+    font-family: "Microsoft YaHei", Arial, Verdana, sans-serif;
+    font-size:1em;
+}
+
+select, input, select ,textarea {
+	margin:0;
+	font-size:1em;
+	font-family:"Microsoft YaHei", Arial, Verdana, sans-serif;
+	vertical-align:middle;
+}
+input,button,select,textarea{ outline:none;} 
+textarea{ font-size:1em; resize:none;} 
+
+.body{
+    /*font-family:Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", "Hiragino Sans GB", Simsun, sans-self;*/
+    margin: 0 auto;
+    padding:0;
+}
+img{
+    width: 100%;
+    display: block;
+}
+a{
+    color: #000000;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+
+}
+a,img,button,input,textarea {
+    -webkit-tap-highlight-color:rgba(255,255,255,0);
+}
+.tour{
+    width: 100%;
+    height: 3rem;
+    border-bottom: 1px solid #000000;
+    position: relative;
+    border-color: rgba(221, 221, 221, 0.16);
+    background-color: #308dea;    
+    color: #000;
+}
+.tour p{
+    line-height: 3rem;
+    font-size: 1.8rem;
+    margin-left:2rem;
+}
+.top{
+    width: 100%;
+}
+.top img{
+    padding:1rem 0.2rem;
+}
+.title {
+    width:100%;
+    height:16rem;
+}
+.regdl{
+    background-color: #308dea;
+    color:#fff;
+    line-height: 3rem;
+    font-size: 1.8rem;
+    padding:0.5rem 1rem;
+    margin-left:1rem;
+
+}
+.title img {
+    width:7rem;
+    float:left;
+    padding:0 1rem;
+}
+
+.title li{
+    width:49%;
+    float:left;
+    padding-top:1rem;
+}
+
+.title label{
+    color:#f4d915;
+    font-size:19px;
+}
+
+.title dd{
+    width:100%;
+    float:left;
+    padding-top:1rem;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom:1rem;
+}
+.zshlogo{
+    margin-bottom:5rem;
+    text-align:center;
+    /*margin-top:5rem;*/
+}
+.line{
+    width:100%;
+    height:0.3rem;
+    background:#308dea;
+}
+
+.footing{
+    width: 100%;
+    height: 6rem;
+    position: fixed;
+    bottom:0;
+    background-color: #ffffff;
+}
+.footing ul{
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+    top:0.5rem
+}
+.footing ul li{
+    display: block;
+    float: left;
+}
+.li6{
+    width: 48%;
+    padding-left: 1rem;
+    line-height: 4rem;
+    margin-right:1rem;
+}
+.li6 button{
+    white-space: nowrap;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 4rem;
+    background-color: #308dea;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.li7{
+    width: 48%;
+    padding-right: 1rem;
+    line-height: 4rem;
+}
+.li7 button{
+    white-space: nowrap;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 4rem;
+    background-color: #308dea;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.menu{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    background-color: #ffffff;
+    z-index: 9999;
+}
+.menu ul{
+	padding-top:1rem;
+    padding-bottom:1rem;
+}
+.menu ul li{
+
+    width: 80%;
+    text-align: center;
+    margin: 1rem auto;
+}
+.menu ul  a{
+    line-height: 3rem;
+    margin-top: 1rem;
+    display: block;
+    font-size: 1.6rem;
+    letter-spacing: 0.5rem;
+    border: 1px solid #898989;
+}
+.menu ul .aclass{
+    color: green;
+    border: 1px solid green;
+}
+.changeadd{
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    z-index: 444;
+    display: none;
+}
+.shdz{
+    height: 5rem;
+}
+.shdz p{
+    border-top:1px solid #979797 ;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    border-bottom: 1px solid #979797;
+}
+.shdz .gbdd {
+    text-align: right;
+    margin-right: 1.5rem;
+    margin-top: -3rem;
+}
+.shdz .gbdd span{
+  	   display: block;
+    font-size: 3rem;
+   margin-top: -3.8rem;
+}
+.dzlb{
+    border-bottom: 1px solid #979797;
+}
+.harvest{
+	margin-left:1.5rem;
+	font-size:1.3rem;
+}
+.harvest .person{
+    margin-top: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.harvest .diqiu{
+    margin-top: -1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+hr{
+	border:none;
+}
+.gldz{
+    width: 100%;
+}
+.gldz li{
+    float: left;
+}
+.gldz .li10{
+    margin-left: 1.5rem;
+    margin-top: 1.3rem;
+	font-size: 1.6rem;
+}
+.gldz .li11{
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 4.5rem;
+}
+.gldz .li12{
+    float: right;
+    line-height: 4rem;
+    margin-right: 1.5rem;
+}
+.gldz .li12 button{
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    line-height: 4rem;
+    font-size: 2rem;
+}
+.zjdd{
+    position: fixed;
+    bottom: 0;
+    z-index: 888;
+    width: 100%;
+    height: 20rem;
+    background-color: #ffffff;
+    display: none;
+}
+.sfxx table{
+    width: 100%;
+    height: 10rem;
+    margin: 0 auto;
+}
+.sfxx table td {
+    font-size: 1.3rem;
+   border: 1px solid #dcdcdc;
+}
+.sfxx table .td1 {
+  text-align: center;
+}
+.sfxx table tr td input{
+    font-size: 1.3rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+.bc{
+    width: 100%;
+    margin-top: 1rem;
+   text-align: center;
+}
+.theme-popover-mask {
+    z-index: 99;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    opacity:0.4;
+    filter:alpha(opacity=40);
+    display:none
+}
+.bc button{
+    height: 3rem;
+    width: 80%;
+    background-color: #ffffff;
+    border: 1px solid green;
+    outline: none;
+}
+
+/*订单*/
+.left {float:left}
+.right{float:right;}
+.order{margin:1rem;border:1px solid #a5a5a5;border-radius:5px;font-size:14px;}
+.order h2{font-size:14px;}
+.hang {padding:1rem;border-bottom:1px solid #a5a5a5;line-height:3rem;}
+.hang p{margin-top:10px;font-size:11px;color:#e6831e;line-height:16px;}
+.order input,select{border-radius:5px; padding:0.6rem;width:18rem;}
+.order select{height:35px;}
+.orderInfo{margin:1rem;border:1px solid #a5a5a5;border-radius:5px;background:#f1db8b;text-align:center;font-size:14px;}
+.orderInfo div{margin:0.5rem auto;}
+.orderInfo label{color:#f08f1e;}
+
+.orderBtn{text-align:center;margin:1rem;}
+.orderBtn input{background:#7bc854;padding:1rem 5rem;border-radius:5px;color:#fff;font-size:16px;}
+
+/*注册代理首页*/
+.header{height:140px;background:url(/Images/bj.png) no-repeat 0% 0% / 100% 100%;}
+.header h2{text-shadow:none;padding: 15px 10px 0px 10px; height: 34px;color: RGB(0,74,137);font-size: 20px;font-weight: bold;}
+.header p{text-shadow:none;left: 5%;top: 100px;width: 90%;color: #004A89; line-height: 20px;font-size: 14px;position: absolute;}
+.xq_text{background: rgb(255, 255, 255); margin: 15px 10px 10px;height: 135px;opacity: 0.5;}
+.content{padding-bottom: 30px;padding-top: 30px;}
+.text h2 {
+    padding: 10px;
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+}
+.choice_o {
+    float: left;
+    width: 100%;
+}
+.choice_o span {
+    float: left;
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+    color: #fb8e0b;
+}
+.choice_o ul {
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+.choice_o ul li {
+    float: left;
+    border: 1px solid #e1e1e1;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: -5px;
+    width: 200px;
+}
+.cho_r {
+    margin-right: 17px;
+}
+.choice_o ul li a.cho_hover {
+    background: #00a2ca;
+    color: white;
+    width: 200px;
+}
+.choice_o ul li a, .pj_t ul li a {
+    color: #484d56;
+    display: block;
+    text-align: center;
+}
+.text p {
+    padding: 5px 10px 0px;
+    line-height: 24px;
+    font-size: 14px;
+}
+.span1 {
+    font-size: 12px;
+}
+.text p b {
+    color: rgb(51, 51, 51);
+}
+.logo_yh {
+    background: #e74c3c;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 3px;
+    position: relative;
+    font-size: 12px;
+}
+
+.content img {
+    width:7px;
+    border: 0px currentColor;
+    border-image: none;
+}
+.cho_hover{
+    background: #00a2ca;
+    color: white;
+    width: 200px;
+}

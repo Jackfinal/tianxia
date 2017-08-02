@@ -1,0 +1,838 @@
+body {
+	margin: 0px; padding: 0px;
+}
+h1 {
+	margin: 0px; padding: 0px;
+}
+h2 {
+	margin: 0px; padding: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+hr {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+dl {
+	margin: 0px; padding: 0px;
+}
+dt {
+	margin: 0px; padding: 0px;
+}
+dd {
+	margin: 0px; padding: 0px;
+}
+ul {
+	margin: 0px; padding: 0px;
+}
+ol {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+pre {
+	margin: 0px; padding: 0px;
+}
+form {
+	margin: 0px; padding: 0px;
+}
+button {
+	margin: 0px; padding: 0px;
+}
+input {
+	margin: 0px; padding: 0px;
+}
+textarea {
+	margin: 0px; padding: 0px;
+}
+th {
+	margin: 0px; padding: 0px;
+}
+td {
+	margin: 0px; padding: 0px;
+}
+body {
+	font: 16px/1.125 "Microsoft Yahei", "Tahoma", "SimSun"; color: #444444; font-size-adjust: none; font-stretch: normal;
+}
+button {
+	font: 16px/1.125 "Microsoft Yahei", "Tahoma", "SimSun"; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+input {
+	font: 16px/1.125 "Microsoft Yahei", "Tahoma", "SimSun"; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+select {
+	font: 16px/1.125 "Microsoft Yahei", "Tahoma", "SimSun"; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+textarea {
+	font: 16px/1.125 "Microsoft Yahei", "Tahoma", "SimSun"; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+ul {
+	list-style: none;
+}
+ol {
+	list-style: none;
+}
+li {
+	list-style: none;
+}
+img {
+	border: 0px currentColor; border-image: none; display: block;
+}
+em {
+	font-style: normal;
+}
+i {
+	font-style: normal;
+}
+a {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+.clearfix::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+.clearfix {
+	display: inline-block;
+}
+.clearfix {
+	display: block;
+}
+body {
+	background: rgb(247, 247, 247); -webkit-box-orient: vertical;
+}
+.index_page {
+	margin: 0px auto; min-width: 320px;
+}
+.content {
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+.mt10 {
+	margin-top: 10px;
+}
+.swiper-container {
+	margin: 0px auto; overflow: hidden; position: relative; z-index: 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -o-backface-visibility: hidden;
+}
+.swiper-wrapper {
+	width: 100%; position: relative; transform: translate3d(0px, 0px, 0px); transition-property: transform, left, top; transition-duration: 0s; transition-timing-function: ease; -webkit-transform: translate3d(0px, 0, 0); -moz-transform: translate3d(0px, 0, 0); -webkit-transition-property: -webkit-transform, left, top; -webkit-transition-duration: 0s; -webkit-transition-timing-function: ease; -moz-transition-property: -moz-transform, left, top; -moz-transition-duration: 0s; -moz-transition-timing-function: ease; -o-transition-property: -o-transform, left, top; -o-transition-duration: 0s; -o-transform: translate(0px, 0px); -o-transition-timing-function: ease;
+}
+.swiper-free-mode > .swiper-wrapper {
+	margin: 0px auto; transition-timing-function: ease-out; -webkit-transition-timing-function: ease-out; -moz-transition-timing-function: ease-out; -o-transition-timing-function: ease-out;
+}
+.swiper-slide {
+	float: left;
+}
+.swiper-wp8-horizontal {
+	-ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+	-ms-touch-action: pan-x;
+}
+.swiper-container {
+	
+}
+.swiper-slide {
+	
+}
+.swiper-slide img {
+	width: 100%;
+}
+.swiper-slide-active {
+	
+}
+.swiper-slide-visible {
+	
+}
+.swiper-pagination-switch {
+	
+}
+.swiper-active-switch {
+	
+}
+.swiper-visible-switch {
+	
+}
+.pagination {
+	width: 100%; text-align: right; right: 17px; bottom: 0px; position: absolute; background-color: rgb(0, 0, 0);
+}
+.swiper-pagination-switch {
+	background: rgb(153, 153, 153); margin: 0px 3px; border-radius: 10px; width: 10px; height: 10px; display: inline-block; cursor: pointer; box-shadow: inset 0px 1px 2px #555;
+}
+.swiper-active-switch {
+	background: rgb(255, 255, 255);
+}
+.main section .l1 {
+	width: 50%; float: left;
+}
+.main section .r1 {
+	width: 50%; float: right;
+}
+.main section li {
+	width: 50%; float: left; display: block; position: relative; -webkit-box-orient: vertical; -moz-box-orient: vertical; box-orient: vertical;
+}
+.main a {
+	height: auto; display: block;
+}
+.main_pra {
+	background: url("../images/lvgou-img.jpg") no-repeat 0% 0% / 100% 100%; width: 640px; height: 316px; position: relative;
+}
+.p_hot {
+	left: 0px; width: 148px; height: 150px; display: block; position: absolute;
+}
+footer {
+	margin: 8px 0px; width: 100%; text-align: center; color: rgb(51, 51, 51); font-size: 100%;
+}
+.footer {
+	height: 45px;
+}
+.footer .a_cash {
+	padding: 17px 0px 0px 25px; font-size: 14px;
+}
+.footer .a_cash span {
+	color: rgb(255, 153, 51); font-size: 16px;
+}
+.footer .a_cash i {
+	font-size: 12px;
+}
+.footer input.ui-btn-hidden {
+	
+}
+.footer .ui-btn-right {
+	margin-top: 5px;
+}
+.footer .ui-btn {
+	margin-top: 5px;
+}
+.footer .ui-btn-inner {
+	padding: 0.55em 40px 0.5em;
+}
+.ui-grid-b .ui-btn-text {
+	visibility: hidden;
+}
+.ui-icon {
+	top: 15px !important;
+}
+.info_img img {
+	width: 100%;
+}
+.text h2 {
+	padding: 10px; color: rgb(51, 51, 51); font-size: 16px;
+}
+.text p {
+	padding: 5px 10px 0px; line-height: 24px; font-size: 14px;
+}
+.text p.c3 {
+	color: rgb(51, 51, 51);
+}
+.text p b {
+	color: rgb(51, 51, 51);
+}
+.span1 {
+	font-size: 12px;
+}
+.span2 {
+	color: rgb(242, 46, 0); font-weight: bold;
+}
+.menu {
+	top: 56px; right: 2%; position: absolute; z-index: 1001;
+}
+.verification_box {
+	padding: 15px;
+}
+.list1 li {
+	height: 70px; position: relative;
+}
+.list1 li label {
+	width: 30%; text-align: right; color: rgb(51, 51, 51); padding-top: 17px; font-size: 14px; float: left;
+}
+.list1 li label.n1 {
+	padding-top: 0px;
+}
+.list1 li label i {
+	color: rgb(244, 47, 47);
+}
+.list1 li .form1 {
+	left: 30.2%; top: 0px; width: 69%; position: absolute;
+}
+.list1 li .form1 span.red {
+	color: rgb(244, 47, 47); line-height: 18px; display: inline-block;
+}
+.list1 li .select814 {
+	width: 100%; float: left;
+}
+.list1 li .select814 i {
+	background: url("../images/select_img_03.png") no-repeat; top: 5px; width: 28px; height: 28px; right: 5px; position: absolute;
+}
+.list1 li .select1 {
+	width: 100%; height: 30px; line-height: 30px; float: left;
+}
+.list1 li .ui-controlgroup-controls {
+	width: 100% !important;
+}
+.list1 li .ui-field-contain {
+	margin: 0px !important;
+}
+.list1 li.w70 .ui-input-text {
+	width: 49%;
+}
+.list1 li.w40 .ui-input-text {
+	width: 49%; float: left;
+}
+.list1 li.form818 label {
+	width: auto; padding-top: 0px;
+}
+.select814 {
+	display: block; position: relative;
+}
+.select select {
+	left: 0px; top: 0px; width: 100%; height: 100%; right: 0px; bottom: 0px; font-size: 40px; position: absolute; z-index: 2;
+}
+.select span {
+	left: 0px; top: 0px; text-align: center; right: 0px; bottom: 0px; position: absolute; z-index: 1;
+}
+.inp1 {
+	padding: 0px 1%; border: currentColor; border-image: none; width: 98%; height: 100%;
+}
+.inp2 {
+	padding: 0px 1%; border: 1px solid rgb(153, 153, 153); border-image: none; width: 55%; height: 100%; float: left;
+}
+.onclick-captcha {
+	background: rgb(233, 233, 233); margin: 0.5em 0px 0.5em 0.5em; border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; width: 40%; height: 33px; text-align: center; color: rgb(102, 102, 102) !important; line-height: 33px; font-size: 14px; display: inline-block;
+}
+.tit1 {
+	background: rgb(153, 153, 153); height: 35px; color: rgb(255, 255, 255); line-height: 35px; padding-left: 4%; font-size: 14px;
+}
+.tit2 {
+	background: rgb(51, 51, 51); color: rgb(255, 255, 255); font-size: 14px;
+}
+.tit2 div {
+	padding: 5px 2% 0px;
+}
+.a1 {
+	background: rgb(51, 153, 0); border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; height: 33px; text-align: center; color: rgb(255, 255, 255); line-height: 33px; font-size: 14px; display: block;
+}
+.tit2 .t-j {
+	width: 30%; height: auto; float: right;
+}
+.tit2 .now-buy {
+	margin: 0px auto; width: 60%;
+}
+a.now-buy:hover {
+	background: rgb(1, 103, 41);
+}
+.tit2 span {
+	color: rgb(244, 47, 47);
+}
+.list2 {
+	padding: 0px 6px 60px; font-size: 14px;
+}
+.list2 li {
+	padding: 10px 0px; overflow: auto; clear: both; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.list2 li label {
+	width: 5%; float: left;
+}
+.list2 li .form-text {
+	width: 94%; margin-left: 1%; float: left;
+}
+.list2 li .form-text p {
+	color: rgb(51, 51, 51); padding-bottom: 3px;
+}
+.list2 li .form-text p span {
+	color: rgb(244, 47, 47); float: right;
+}
+.list2 li .form-text span {
+	color: rgb(153, 153, 153);
+}
+.w40 .ui-input-text {
+	float: left;
+}
+.other_service {
+	background: rgb(255, 255, 255); padding: 30px 20px 10px;
+}
+.other_service h2 {
+	font-size: 16px;
+}
+.other_service dl {
+	font-size: 14px;
+}
+.other_service dt {
+	margin: 20px 0px;
+}
+.other_service dd {
+	overflow: auto; clear: both; margin-bottom: 20px;
+}
+.other_service dd span {
+	float: left;
+}
+.other_service span.n1 {
+	width: 43%;
+}
+.other_service span.n2 {
+	width: 35%;
+}
+.other_service span.n3 {
+	width: 10%;
+}
+.box1 {
+	width: 100%;
+}
+.box1_bor {
+	border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; overflow: auto; clear: both; margin-bottom: 6px;
+}
+.box1_bor .f-img1 {
+	width: 101px; height: 77px; float: left;
+}
+.box1_bor .imt-r1 {
+	padding: 30px 0px 0px 10px; font-size: 16px; display: table-cell;
+}
+.box1_bor .imt-r1 span {
+	color: rgb(244, 47, 47); padding-left: 10px;
+}
+.box1 .h228 .f-img {
+	width: 113px; height: 103px; float: left;
+}
+.box1_bor .img-r {
+	padding: 10px 10px 0px; overflow: hidden; font-size: 16px; display: block;
+}
+.box1_bor .img-r h2 {
+	color: rgb(51, 51, 51); font-size: 18px;
+}
+.box1_bor .img-r p {
+	padding: 10px 0px; color: rgb(51, 51, 51);
+}
+.box1_bor .img-r p .span1 {
+	color: rgb(102, 102, 102);
+}
+.box1_bor a {
+	overflow: hidden; clear: both; display: block;
+}
+.box1_bor a .c-k {
+	background: rgb(51, 153, 0); border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; width: 100%; height: 30px; text-align: center; color: rgb(255, 255, 255); line-height: 30px; display: block;
+}
+.box1_bor a:hover .c-k {
+	background: rgb(1, 103, 41);
+}
+.detailed_information li {
+	overflow: auto; clear: both; margin-bottom: 20px;
+}
+.detailed_information li .f-img {
+	width: 62px; height: 58px; float: left;
+}
+.detailed_information li p {
+	padding: 10px 10px 0px; overflow: hidden; display: block;
+}
+.header {
+    background: #00a2ca;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.manage {
+	margin: 10px auto; border-radius: 4px; border: 1px solid rgb(51, 153, 0); border-image: none; width: 50%; height: 28px; line-height: 28px;
+}
+.manage li {
+	width: 50%; text-align: center; float: left;
+}
+.manage li a {
+	color: rgb(51, 153, 0) !important; font-size: 14px; display: block;
+}
+.manage li a.on {
+	background: rgb(51, 153, 0); color: rgb(255, 255, 255) !important; text-shadow: none;
+}
+.tab1 {
+	margin: 0px 6px; border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none;
+}
+.tab1 ul li.no {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.tab1 ul li {
+	height: 40px; line-height: 40px; border-bottom-color: rgb(153, 153, 153); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.tab1 ul li .product_details li {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.tab1 ul li.h30 {
+	background: rgb(102, 102, 102); height: 30px; color: rgb(255, 255, 255); line-height: 30px;
+}
+.tab1 ul li div {
+	text-align: center; float: left; text-shadow: none;
+}
+.tab1 ul li .w30 {
+	width: 30%;
+}
+.tab1 ul li .w25 {
+	width: 25%;
+}
+.tab1 ul li .w20 {
+	width: 20%;
+}
+.y_pay {
+	background: rgb(233, 233, 233); margin: 74px auto 0px; border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; width: 90%; height: 26px; text-align: center; color: rgb(153, 153, 153) !important; line-height: 26px; display: block;
+}
+.tab1 ul li a.pay {
+	background: rgb(242, 46, 0); margin: 74px auto 0px; border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; width: 90%; height: 26px; text-align: center; color: rgb(255, 255, 255) !important; line-height: 26px; display: block;
+}
+.tab1 ul li a.pay:hover {
+	background: rgb(204, 40, 2);
+}
+.cont-no {
+	padding-bottom: 60px;
+}
+.dd-img {
+	margin: 0px auto; padding: 90px 0px 40px; width: 74px; height: 74px;
+}
+.cont-no p {
+	text-align: center; font-size: 14px;
+}
+.tit2 div.ui-btn {
+	margin: 0.5em 30%;
+}
+.bg-color1 {
+	background: rgb(102, 102, 102);
+}
+.ques-list li {
+	height: 45px; line-height: 45px;
+}
+.ques-list li a {
+	background: url("../images/ques-list-li-img.png") repeat-x left bottom rgb(51, 51, 51); padding: 0px 2% 0px 4%; color: rgb(255, 255, 255) !important; font-size: 14px; display: block;
+}
+.ques-list li a i {
+	background: url("../images/ques-list-li-img-i.png") no-repeat 0% 0% / 11px 11px; width: 11px; height: 11px; margin-right: 10px; display: inline-block;
+}
+.input-bor {
+	width: 100%; position: relative;
+}
+.input-bor textarea {
+	padding: 1%; border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; width: 98%; position: relative; min-height: 150px; resize: none;
+}
+.input-bor .no-1 {
+	right: 8px; bottom: 10px; color: rgb(153, 153, 153); font-size: 12px; position: absolute;
+}
+.submit {
+	padding-top: 10px;
+}
+.submit a {
+	border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; width: 49%; height: 35px; text-align: center; line-height: 35px; font-size: 14px; float: left;
+}
+.submit a.cancel {
+	background: rgb(233, 233, 233); color: rgb(51, 51, 51) !important; text-shadow: none;
+}
+.submit a.cancel:hover {
+	background: rgb(153, 153, 153);
+}
+.submit a.send {
+	background: rgb(51, 153, 0); color: rgb(255, 255, 255) !important; float: right; text-shadow: none;
+}
+.submit a.send:hover {
+	background: rgb(1, 103, 41);
+}
+.b-e1 {
+	background: rgb(225, 225, 225);
+}
+.comment1 {
+	padding: 10px; border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; color: rgb(51, 51, 51);
+}
+.comment2 {
+	border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; color: rgb(51, 51, 51);
+}
+.comment1 a {
+	display: block;
+}
+.comment2 a {
+	display: block;
+}
+.c-day {
+	padding: 6px 0px; color: rgb(153, 153, 153); font-size: 12px; display: block;
+}
+.c-name {
+	color: rgb(51, 51, 51); font-weight: normal;
+}
+.verification_box p.c-cont {
+	text-align: left; font-size: 14px;
+}
+.verification_box p.c-onclick {
+	text-align: right; color: rgb(153, 153, 153); padding-top: 20px; font-size: 14px;
+}
+.verification_box p.c-onclick i {
+	background: url("../images/c-onclick_03.png") no-repeat 0% 0% / 15px 13px; width: 15px; height: 13px; margin-right: 6px; vertical-align: -2px; display: inline-block;
+}
+.write {
+	padding: 10px 6px 0px; left: 0px; width: 100%; bottom: 0px; border-top-color: rgb(153, 153, 153); border-top-width: 1px; border-top-style: solid; position: fixed;
+}
+.write div {
+	background: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); border-image: none; width: 100%; height: 28px; line-height: 28px; position: relative;
+}
+.write div a {
+	width: 100%; height: 100%; color: rgb(153, 153, 153); font-size: 14px; display: block;
+}
+.write div a span {
+	padding-left: 1%;
+}
+.write div i {
+	background: url("../images/write_03.png") no-repeat 0% 0% / 23px 23px; left: 10px; top: 2px; width: 23px; height: 23px; display: inline-block; position: absolute;
+}
+.h-t .dd-img {
+	width: 82px; height: 78px;
+}
+.pad10 {
+	padding: 10px;
+}
+.verification_box p {
+	color: rgb(51, 51, 51); padding-bottom: 40px;
+}
+.verification_box p.f16 {
+	text-align: center; font-size: 16px;
+}
+.verification_box p i {
+	margin-right: 6px; vertical-align: middle; display: inline-block;
+}
+.verification_box p i.suc {
+	background: url("../images/suc_03.png") no-repeat 0% 0% / 23px 18px; width: 23px; height: 18px;
+}
+.verification_box p i.fail {
+	background: url("../images/fail_03.png") no-repeat 0% 0% / 19px 19px; width: 19px; height: 19px;
+}
+.verification_box p.datum {
+	text-align: left; font-size: 14px;
+}
+.xq {
+	background: url("images/bj.png") no-repeat 0% 0% / 100% 100%; width: 100%; height: 199px; font-family: "Microsoft Yahei"; position: relative;
+}
+.xq h2 {
+	padding: 15px 10px 0px 10px; height: 34px; color: RGB(0,74,137); font-size: 20px; font-weight: bold;
+}
+.xq_text {
+	background: rgb(255, 255, 255); margin: 0px 10px 10px; height: 135px; opacity: 0.5;
+}
+.xq p {
+	left: 5%; top: 70px; width: 90%; color: #004A89; line-height: 20px; font-size: 14px; position: absolute;
+}
+.account_number {
+	padding: 14px 4px 0px; height: 38px; overflow: auto; clear: both;
+}
+.account_number li {
+	height: 38px; font-size: 14px; float: left;
+}
+.account_number li.n2 {
+	height: 34px; float: right;
+}
+.box2 {
+	background: rgb(255, 255, 255); padding: 0px 20px; border: 1px solid rgb(187, 187, 187); border-image: none;
+}
+.product_details {
+	padding-top: 30px;
+}
+.product_details li {
+	overflow: auto; clear: both;
+}
+.product_details li label {
+	text-align: right; float: left;
+}
+.product_details li label.w140 {
+	width: 70px;
+}
+.product_details li div {
+	overflow: hidden; display: block;
+}
+.product_details li div p {
+	text-align: left; padding-bottom: 0px;
+}
+.pay_way {
+	background: rgb(255, 255, 255); border: 1px solid rgb(187, 187, 187); border-image: none; margin-top: 16px;
+}
+.pay_way dl dt {
+	padding: 0px 0px 10px 20px; height: 35px; line-height: 35px; border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.pay_way dl dd {
+	height: 35px; line-height: 35px; overflow: auto; padding-left: 20px; clear: both; border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.pay_way dl dd a {
+	color: rgb(51, 51, 51) !important; font-weight: normal !important; display: block;
+}
+.pay_way dl dd a .ll_img {
+	margin-right: 7px; vertical-align: middle; display: inline-block;
+}
+.pay_way dl dd a i {
+	margin: 15px 20px 0px 0px; width: 15px; height: 11px; float: right; display: inline-block;
+}
+.pay_way dl dd .product_details {
+	width: 73%;
+}
+.coupon_box {
+	margin: 0px auto; width: 240px;
+}
+.coupon_box p {
+	padding: 18px 0px; text-align: center;
+}
+.coupon_box p b {
+	color: rgb(198, 6, 6);
+}
+a.c-k {
+	background: rgb(51, 153, 0); border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; width: 100%; height: 30px; text-align: center; color: rgb(255, 255, 255) !important; line-height: 30px; display: block; text-shadow: none;
+}
+a.c-k:hover {
+	background: rgb(1, 103, 41);
+}
+.c-k666 {
+	background: rgb(102, 102, 102); border-radius: 4px; border: 1px solid rgb(153, 153, 153); border-image: none; width: 100%; height: 30px; text-align: center; color: rgb(255, 255, 255) !important; line-height: 30px; display: block; text-shadow: none;
+}
+.coupon_list_img li {
+	width: 240px; height: 89px; margin-bottom: 15px;
+}
+.coupon_list_img li a {
+	width: 240px; height: 89px; display: block;
+}
+.coupon_list_img li a.n1 {
+	background: url("../images/coupon_img_03.png") no-repeat 0% 0% / 240px 89px;
+}
+.coupon_list_img li a.n2 {
+	background: url("../images/coupon_img_07.png") no-repeat 0% 0% / 240px 89px;
+}
+.coupon_list_img li a.n3 {
+	background: url("../images/coupon_img_10.png") no-repeat 0% 0% / 240px 89px;
+}
+.coupon_box p.hot_preferential_region_2 {
+	padding: 0px; height: 40px; color: rgb(255, 255, 255) !important; line-height: 40px; font-size: 14px;
+}
+.coupon_box p.hot_preferential_region_2 b {
+	color: rgb(255, 255, 255) !important; font-size: 20px;
+}
+.hot_preferential_price_2 {
+	text-align: center; color: rgb(255, 255, 255) !important; padding-left: 14px; font-size: 25px;
+}
+.hot_preferential_price_2 b {
+	color: rgb(255, 255, 255) !important; font-size: 40px;
+}
+.c_l {
+	width: 200px; float: left;
+}
+.c_r {
+	width: 40px; float: right;
+}
+.coupon_box .c_r p {
+	padding: 3px 0px 0px 10px; width: 14px; color: rgb(255, 255, 255) !important; line-height: 20px;
+}
+.pay_way dl dd .product_details {
+	float: left;
+}
+.m_input {
+	margin: 54px 0px 0px 20px; float: left;
+}
+.w90 {
+	width: 90px;
+}
+.pl30 {
+	padding-left: 30px;
+}
+.mt25 {
+	margin-top: 25px;
+}
+.mb15 {
+	padding-bottom: 15px;
+}
+.mb15 li {
+	height: 18px; margin-bottom: 15px;
+}
+.ft_lt {
+	text-decoration: line-through;
+}
+.verification_box p.c_f93 {
+	color: rgb(255, 153, 51);
+}
+.float829_1 {
+	width: 100%;
+}
+.float829_2 {
+	margin: 30px 10px 0px 0px;
+}
+.bor-999 {
+	margin: 12px 0px; border-right-color: rgb(153, 153, 153); border-right-width: 1px; border-right-style: solid;
+}
+.text_cen {
+	height: 50px; text-align: center; color: rgb(51, 153, 51); line-height: 50px; cursor: pointer;
+}
+.radiochoicei {
+	margin-top: 60px; display: block;
+}
+.font0904 .ui-btn-inner {
+	font-size: 14px !important;
+}
+.l1 {
+	width: 50%; float: left;
+}
+.l1 img {
+	width: 100%; display: block;
+}
+.r1 img {
+	width: 100%; display: block;
+}
+.r1 {
+	width: 50%; float: right;
+}
+body {
+	margin: 0px auto; min-width: 320px;
+}
+.main {
+	width: 100%; overflow: hidden; clear: both;
+}
+.footer .ui-title {
+	margin-bottom: 0px !important;
+}
+
+.box
+{
+    color: #424348;
+    margin: 10px 6px;
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    background-color: #e1e1e1;
+    box-shadow: 0 1px 1px #fff;
+    -moz-box-shadow: 0 1px 1px #fff;
+    -webkit-box-shadow: 0 1px 1px #fff;
+    -o-box-shadow: 0 1px 1px #fff;
+    -ms-box-shadow: 0 1px 1px #fff;
+    overflow: hidden;
+}
+
+/** ���ֲ�CSS DaiChao 2015-08-28**/
+#BgDiv1{background-color:#000; position:absolute; z-index:9999;  display:none;left:0px; top:0px; width:100%; height:100%;opacity: 0.6; filter: alpha(opacity=60);}
+.DialogDiv{position:absolute;z-index:99999;}/*���͹���*/
+.U-user-login-btn{ display:block; border:none; background:url(../images/bg_mb_btn1_1.png) repeat-x; font-size:1em; color:#efefef; line-height:49px; cursor:pointer; height:53px; font-weight:bold;
+border-radius:3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+ width:100%; box-shadow: 0 1px 4px #cbcacf, 0 0 40px #cbcacf ;}
+ .U-user-login-btn:hover, .U-user-login-btn:active{ display:block; border:none; background:url(../images/bg_mb_btn1_1_h.png) repeat-x; font-size:1em; color:#efefef; line-height:49px; cursor:pointer; height:53px; font-weight:bold;
+border-radius:3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+ width:100%; box-shadow: 0 1px 4px #cbcacf, 0 0 40px #cbcacf ;}
+.U-user-login-btn2{ display:block; border:none;background:url(../images/bg_mb_btn1_1_h.png) repeat-x;   font-size:1em; color:#efefef; line-height:49px; cursor:pointer; font-weight:bold;
+border-radius:3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+ width:100%; box-shadow: 0 1px 4px #cbcacf, 0 0 40px #cbcacf ;height:53px;}
+.U-guodu-box { padding:5px 15px;  background:#3c3c3f; filter:alpha(opacity=90); -moz-opacity:0.9; -khtml-opacity: 0.9; opacity: 0.9;  min-heigh:200px; border-radius:10px;}
+.U-guodu-box div{ color:#fff; line-height:20px; font-size:12px; margin:0px auto; height:100%; padding-top:10%; padding-bottom:10%;}

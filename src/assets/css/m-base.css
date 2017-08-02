@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+body{font:16px/1.5 'Microsoft Yahei','helvetica','arial';color:#222; background:#fff; min-width:320px;margin:0 auto;}
+p,ul,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,select,button,textarea,iframe{margin:0; padding:0;}
+body,html{-webkit-text-size-adjust:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+video embed,video object,video iframe,video{width:100%;height:auto;}
+img{border:0 none;vertical-align:top;max-width:100%;height:auto;width:auto\9;-ms-interpolation-mode:bicubic;}
+ul,li{list-style-type:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+i,em,cite{font-style:normal;}
+.clearfix:after{content:".";display:block;height:0;clear: both;visibility:hidden;}
+.clearfix{*zoom:1;}
+.msf{font-family:\5FAE\8F6F\96C5\9ED1,\9ED1\4F53;}
+.fl{float:left;}
+.fr{float:right;}
+.fb{font-weight:bold;}
+.f14{font-size:14px;}
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.hide{position:absolute;top:-999em;}
+.rela{position:relative;}
+.abso{position:absolute;}
+.blo{display:block;}
+a{text-decoration:none;}
+a,a:hover{outline:none;blur:expression(this.onFocus=this.blur());}

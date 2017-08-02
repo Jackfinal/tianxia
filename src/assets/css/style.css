@@ -1,0 +1,205 @@
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+/* --------------------------------
+Main Components
+-------------------------------- */
+
+
+/*大屏幕*/
+
+/*小屏幕*/
+
+      .navbar{}
+      .navbar-default .navbar-brand {color: #fff;}
+      .navbar-default .navbar-brand:hover,
+      .navbar-default .navbar-brand:focus {color: #fff;}
+      .navbar-toggle{border-color: #ccc;}
+      .navbar-default .navbar-collapse, .navbar-default .navbar-form{border:1px solid #ddd;}
+      .navbar-default .navbar-toggle:hover,
+      .navbar-default .navbar-toggle:focus {
+        background: none;
+      }
+      .navbar-default .navbar-toggle .icon-bar{background-color: #ccc;}
+      .navbar-default .navbar-nav{margin-top: 0px;margin-bottom: 0px;}
+      .navbar-default .navbar-nav > li {}
+      .navbar-default .navbar-nav > li:last-child{border: none;}
+      .navbar-default .navbar-nav > li > a,
+      .navbar-default .navbar-nav .open .dropdown-menu > li > a{color: #5e5e5e;}
+      .navbar-default .navbar-nav > li > a:hover,
+       .navbar-default .navbar-nav > li > a:focus,
+       .navbar-default .navbar-nav > .active > a,
+       .navbar-default .navbar-nav > .active > a:hover,
+       .navbar-default .navbar-nav > .active > a:focus,
+       .navbar-default .navbar-nav > .open > a,
+       .navbar-default .navbar-nav > .open > a:hover,
+       .navbar-default .navbar-nav > .open > a:focus,
+       .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{
+        background-color: #3fbe72; color: #fff;}
+       .small-nav{background: rgba(255,255,255,0.9); margin-top: 0px;}
+
+      .flash{margin-top: 50px;}
+      .top_name{display: none;}
+      .logo{margin:8px 0px 0px 7px; max-width:180px; max-height: 50px;}
+      .aboutus{margin-top:25px;}
+      .aboutus img{display: none;}
+      .our_service{background-position:left center; text-align: center;margin-top: 30px;}
+      .our_service h2{background-image: none;padding-right:0px;}
+      .aboutus{text-align: center;}
+      .aboutus h2{background-image: none; padding-left: 0px;}
+      .aboutus span,.aboutus p{padding-left: 0px;}
+      .view-all{margin-left: 0px; margin-top: 10px;}
+      .index_product{margin-top: 30px;}
+      .page_bg{display: none;}
+      .list_box{margin:70px 0px 0px 0px; }
+      .flash div.bx-pager{ /*display:none;*/}
+      .left_h2{margin-top: 0px;}
+      #product div.flash,#product h2.left_h1,#photo div.flash,#photo h2.left_h1{display: none;}
+      .index_left_nav{margin:0px 15px 15px 15px;}
+      .product_con img,.contents img{width:100%;}
+      .news_time{ display:none;}
+      .footer_nav{background-color: #fafafa;}
+      #pic-page a img {width:35px;}
+      #cmsFloatPanel{ display: none;}
+      .point span.to_prev,.point span.to_next{text-align:left; padding-bottom: 8px;}
+      footer{ margin-bottom:50px;}
+
+.navbar {
+    margin: 0px;
+
+    border: none;
+ bottom: 0;    min-height: 50px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0,0.1);
+
+}
+
+
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    border-radius: 0;
+  }
+
+
+.foot_nav{ width:50%; float:left;background-color: #fafafa;text-align:center;}
+.foot_nav:hover,.foot_nav:focus{background-color: #e4e4e4;}
+.foot_nav a{color:#898989;display:block; font-size:14px;}
+.foot_nav a:hover,.foot_nav a:focus{text-decoration:none;}
+.foot_nav span{display:block; padding:3px 0px 0px 0px;}
+.webshare{width: 230px; padding: 5px;}
+.ewebshare{width: 200px; padding: 5px;}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+
+
+
+.cd-accordion-menu {width: 100%; max-width: 640px;background: #4d5158;margin: 0 auto;font-family: "宋体";}
+.cd-accordion-menu ul {}
+.cd-accordion-menu li {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+.cd-accordion-menu input[type=checkbox] {/* hide native checkbox */position: absolute;opacity: 0;}
+.cd-accordion-menu label, .cd-accordion-menu a {position: relative;display: block;padding: 1.2em 18px 1.2em 2em; background-color: #505050;box-shadow: inset 0 -1px #ddd;color: #ffffff;font-size: 1.1em; font-family:微乳雅黑;}
+#lia{font-family: 微软雅黑;background-color: #f2f2f2; color: #333;}
+
+.no-touch .cd-accordion-menu label:hover, .no-touch .cd-accordion-menu a:hover { background: #52565d;}
+.cd-accordion-menu label {cursor: pointer;}
+.cd-accordion-menu label::before, .cd-accordion-menu label::after {  background-repeat: no-repeat;}
+.cd-accordion-menu label::before {/* arrow icon */left: 18px;background-position: 0 0; -webkit-transform: translateY(-50%) rotate(-90deg);-moz-transform: translateY(-50%) rotate(-90deg);-ms-transform: translateY(-50%) rotate(-90deg);-o-transform: translateY(-50%) rotate(-90deg);transform: translateY(-50%) rotate(-90deg);}
+.cd-accordion-menu label::after {/* folder icons */left: 41px;background-position: -16px 0;}
+.cd-accordion-menu input[type=checkbox]:checked + label::before {/* rotate arrow */-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);-ms-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);}
+.cd-accordion-menu input[type=checkbox]:checked + label::after {/* show open folder icon if item is checked */background-position: -32px 0;}
+.cd-accordion-menu input[type=checkbox]:checked + label + ul,
+.cd-accordion-menu input[type=checkbox]:checked + label:nth-of-type(n) + ul {/* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*//* show children when item is checked */display: block;}
+
+.cd-accordion-menu ul a {background: #35383d;box-shadow: inset 0 -1px #41444a;padding-left: 3em;}
+.no-touch .cd-accordion-menu ul label:hover, .no-touch
+.cd-accordion-menu ul a:hover {background: #3c3f45;}
+.cd-accordion-menu > li:last-of-type > label,
+.cd-accordion-menu > li:last-of-type > a,
+.cd-accordion-menu > li > ul > li:last-of-type label,
+.cd-accordion-menu > li > ul > li:last-of-type a {box-shadow: none;}
+.cd-accordion-menu ul label::before {left: 36px;}
+.cd-accordion-menu ul label::after,   n
+.cd-accordion-menu ul a::after {left: 59px;}
+.cd-accordion-menu ul ul label,
+.cd-accordion-menu ul ul a {padding-left: 56px;}
+
+.cd-accordion-menu ul ul ul label,
+.cd-accordion-menu ul ul ul a { padding-left:86px;font-family:微软雅黑;}
+.cd-accordion-menu ul ul ul label::before {left: 72px;}
+.cd-accordion-menu ul ul ul label::after,
+.cd-accordion-menu ul ul ul a::after {left: 95px;}
+@media only screen and (min-width: 600px) {
+.topright{max-width: 6.8%;}
+.top div.float-r{max-width: 4.8%;padding-top:3%;}
+.cd-accordion-menu label::before {left: 24px;}
+.cd-accordion-menu label::after {left: 53px;}
+
+.cd-accordion-menu ul label::after,
+.cd-accordion-menu ul a::after {left: 77px;}
+
+.cd-accordion-menu ul ul label::before {left: 72px;}
+.cd-accordion-menu ul ul label::after,
+.cd-accordion-menu ul ul a::after {left: 101px;}
+.cd-accordion-menu ul ul ul label,
+.cd-accordion-menu ul ul ul label::before {left: 96px;}
+.cd-accordion-menu ul ul ul label::after,
+.cd-accordion-menu ul ul ul a::after {left: 125px;}}
+.cd-accordion-menu.animated label::before {/* this class is used if you're using jquery to animate the accordion */-webkit-transition: -webkit-transform 0.3s;-moz-transition: -moz-transform 0.3s;transition: transform 0.3s;}
+
+.alltitle{font-size:1.2em;font-weight:bold;color:#fff;padding-left:28px;height:3.2em;line-height:3.2em;background-color: #353535;}
+.alltitle img{padding-right:25px;}
+
+
+#light .group_label,div.footer_nav dd{background:url(../images/nav_ico_3.png); background-color: #f2f2f2; color: #333; }
+.cd-accordion-menu li>label,.cd-accordion-menu li ul,.cd-accordion-menu li ul a{background-color: #ececec;color: #505050;}
+.cd-accordion-menu li ul label,.cd-accordion-menu li ul a{box-shadow: inset 0 -1px #ccc;font-family:微软雅黑;}
+.cd-accordion-menu label{background:url(../images/nav_ico_2.png); }
+.cd-accordion-menu label.group_label_child{ }
+
+#light .group_label,.cd-accordion-menu .has-children label{background-repeat: no-repeat;  background-position: 92% center; font-family:微软雅黑;}
+.footer_nav{margin-top: 2em;}
+.footer_nav dt{display: none;}
+div.footer_nav dd{background-repeat: no-repeat;  background-position: 98% center;}
+.footer_nav dd{border-bottom:1px solid #ddd;height: 4em;line-height: 4em;color: #fff;font-size: 14px;padding-left: 2%; }
+div.footer_nav dd.cur{background: #f2f2f2 ;}
+div.footer_nav dt li a{background-color: #ececec;border-bottom:1px solid #ddd;height: 3.5em;line-height: 3.5em;color: #666;font-size: 14px;padding-left: 2%; display: block;}
+.bt1{ line-height:25px; height:25px;color:#F60;   font-size: 16px;    font-weight: 600; font-family:微软雅黑;}
+.bt2 {
+
+ font-family:微软雅黑;
+
+margin-top:5px;
+color:#333;
+
+}
+.bt3{
+margin-top:5px;font-family:微软雅黑;
+font-size:1.1em;
+}
+.bt3 span{color:#FF3600; font-style:oblique; font-weight:600;}
+.bt4{
+    margin-top:10px;
+font-family:微软雅黑;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+ 	width:80px;
+    height: 25px;
+    background: #FE6602;
+    border-radius: 16px;
+    float: left;
+    font-weight: bold;
+    font-family: 微乳雅黑;
+	}
+.header_m {box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);position:fixed; max-width:640px; width:100%; z-index:9; background:#fff; min-width:320px;}
+
+.f1 a{line-height: 51px;text-align: center;}
+.f1 i {font-size: 30px !important;color:#F98715}
+.sname{font-size: 14px;font-weight: bold;line-height: 28px;}

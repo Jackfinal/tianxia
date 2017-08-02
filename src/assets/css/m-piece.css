@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+.mtop-nav{line-height:44px;background:#1597ee;border-top:1px solid #0e7ac3;border-bottom:1px solid #0e7ac3;}
+.mtop-logo a,.mtop-menu a{width:53px;height:44px;display:block; text-indent:-999em;}
+.mtop-logo a{background:url(http://m.chinaacc.com/m_member/images/common/m-logo320.png) no-repeat center center;border-right:1px solid #1a80d9; background-size:37px 30px;}
+.mtop-menu a{background:url(/images/common/menu-i.png) no-repeat center center;border-left:1px solid #72bcf3;}
+.mtop-tit,.top-bread{height:44px;margin:0 83px 0 54px;border-left:1px solid #45adf3;border-right:1px solid #1d75cf; font-size:1.25em;color:#fff; text-shadow:1px 1px 2px #01437b;}
+.mtop-tit a{color:#fff;}
+.top-reg{width:82px; border-left:1px solid #72bcf3;text-shadow:1px 1px 2px #01437b;font-size:1em;}
+.top-reg a{color:#fff;display:block;}
+.top-bread{margin-right:83px;font-size:0.875em;}
+.top-bread dd{height:44px; float:left;padding:0 15px 0 6px; background:url(/images/common/top-breadBg.gif) no-repeat right center;}
+.top-bread dd a{color:#fff;}
+.top-bread dd:last-child{background:none; padding-right:0;}
+
+.mt10{margin-top:10px;}
+.mt14{margin-top:14px;}
+.tit{height:43px;line-height:40px;padding-left:10px;background:url(/images/common/tit-x.gif) repeat-x; background-size:1px 43px; border-top:1px solid #d9d9d9; vertical-align:top;}
+.tit h3{color:#004177; font-size:1.25em;}
+.tit h3 a{color:#004177;}
+.tit p{font-size:1em;color:#636363; font-family:\5b8b\4f53;}
+.tit p a{margin:0 10px;color:#636363; font-family:\5FAE\8F6F\96C5\9ED1; vertical-align:middle;}
+.tit p.red,.tit p.red a{color:#ba2737;}
+.tit p.red a{margin:0; vertical-align:top;}
+.mr10{margin-right:10px;}
+
+.info-col{box-shadow:0 2px 3px #eaeaea;}
+.info-col dl{box-shadow:0 2px 3px #dad9d9 inset; line-height:24px;padding:7px 0 7px 12px; font-size:1.125em;}
+.info-col dt{width:3px;height:18px; background:-moz-linear-gradient(0% 50% 270deg, #0096FF,#0063A9, #0063A9 0%); background:-webkit-gradient(linear,0% 49%, 0% 51%, from(#0096FF), to(#0063A9), color-stop(0.5,#0063A9));float:left; margin-top:4px;}
+.info-col dd{margin-left:3px;color:#636363; font-family:\5b8b\4f53;}
+.info-col dd a{margin:0 11px;color:#636363; font-family:\5FAE\8F6F\96C5\9ED1; vertical-align:top;}
+
+
+.list-ul li{height:37px; line-height:37px; overflow:hidden; font-size:1em; border-bottom:1px dashed #a7a7a7;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.list-ul li a{color:#222;}
+.list-ul li:last-child{border-bottom:0 none;}
+
+.mob-app{padding-top:12px;}
+.mob-app li{width:33%;height:92px; float:left; text-align:center;}
+.mob-app li span{width:62px;height:62px; overflow:hidden;display:block; margin:0 auto;}
+.mob-app li p{line-height:26px; font-size:0.875em; overflow:hidden;}
+.mob-app li p a{color:#333;}
+
+.return-top{padding:0 10px;background:-moz-linear-gradient(#f4f4f4,#efefef); background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#f4f4f4), to(#efefef));display:inline-block; border:1px solid #d8d9db; border-radius:3px; margin:0 auto;}
+.return-top span{background:url(/images/common/returnTop.png) no-repeat left center; background-size:12px 12px;line-height:20px;padding-left:19px; display:inline-block; color:#636363;font-size:0.75em;}
+
+a.unfold-btn{line-height:33px;display:block;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#f5f5f5);background:-moz-linear-gradient(#ffffff,#f5f5f5); background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#ffffff), to(#f5f5f5));background:-o-linear-gradient(#ffffff, #f5f5f5);background:linear-gradient(#ffffff, #f5f5f5);font-size:0.875em; color:#636363; border:1px solid #d8d9db;}
+
+.footer{padding:13px 0;}
+
+.bott-nav{height:42px;line-height:42px;padding:1px 0;border-top:1px solid #bac2d1;border-bottom:1px solid #d8d8d8; background:#446cb3;}
+.bott-nav a{padding:0 15px; letter-spacing:2px;display:inline-block; border-left:1px solid #577bba;border-right:1px solid #335ba3; font-size:0.875em; color:#fff;}
+.bott-nav a:first-child{border-left:0 none;}
+.bott-nav a:last-child{border-right:0 none;}
+
+.ver{margin:10px 0;}
+.ver a{height:17px; line-height:17px;padding-left:25px; background:url(http://m.chinaacc.com/m_member/images/common/ver-i.png) no-repeat; background-size:18px 53px; font-size:0.875em; color:#636363; margin:0 32px; display:inline-block;}
+.ver a.ver-pc{background-position:left -18px;}
+/*.ver a.ver-app{background-position:left -58px;}*/
+.ver a.cur{color:#446cb3;}
+.foo-p{line-height:16px; font-size:0.75em; color:#909090;}
+.foo-p a{color:#909090;}
+
+.shortcut{width:100%;position:fixed;left:0;bottom:0;background:rgba(4,4,4,0.6);z-index:999;}
+.shortcut a{color:#fff;}
+.shortcut span{line-height:20px;display:inline-block; text-align:left;font-size:0.875em; padding:5px 40px 5px 10px;}
+.shortcut i{width:30px;height:30px; line-height:30px; display:inline-block;position:absolute;right:0;top:0; font-size:1.25em; color:#fff;}
