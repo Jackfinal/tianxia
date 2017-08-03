@@ -1,62 +1,77 @@
 <template>
   <div class="">
     <div class="footer_nav">
-    		<dl>
-    			<dd>关于我们</dd>
-    			<dt>
+    		<dl v-for="(item, index) in list">
+    			<dd @click="showList(index)">{{item.name}}</dd>
+    			<dt v-show="item.show">
     				<ul>
-    					<li><a href="about.htm">公司简介</a></li>
-    					<li><a href="about.htm">企业文化</a></li>
-    					<li><a href="about.htm">荣誉资质</a></li>
-    					<li><a href="about.htm">我们的优势</a></li>
-    					<li><a href="about.htm">联系方式</a></li>
+    					<li v-for="(citem, i) in item.child">
+                <router-link :to="{ name: 'Page', params: { id:  citem.id }}" v-if="citem.content!=''">{{citem.name}}</router-link>
+                <router-link :to="{ name: 'Shoplist', params: { id:  citem.id }}" v-else-if="index=='fw'">{{citem.name}}</router-link>
+                <router-link :to="{ name: 'Newlist', params: { id:  citem.id }}" v-else>{{citem.name}}</router-link>
+              </li>
     				</ul>
     			</dt>
     		</dl>
-    		<dl>
-    			<dd>我们的服务</dd>
-    			<dt>
-    				<ul>
-    					<li><a href="service_list.htm" id="lia">注册代账</a></li>
-    					<li><a href="tmzr_list.htm" id="lia">天猫转让</a></li>
-    					<li><a href="sbzc_list.htm" id="lia">商标注册</a></li>
-    					<li><a href="flfw.htm" id="lia">法律咨询</a></li>
-    				</ul>
-    			</dt>
-    		</dl>
+    		</div>
+    <div class="footer" style="margin-bottom:50px;" v-html="site.site.footer">
 
-    		<dl>
-    			<dd>新闻资讯</dd>
-    			<dt>
-    				<ul>
-    					<li><a href="news_list.htm">公司新闻</a></li>
-    					<li><a href="news_list.htm">行业动态</a></li>
-    					<li><a href="news_list.htm">媒体报道</a></li>
-    					<li><a href="news_list.htm">法律法规</a></li>
-    					<li><a href="news_list.htm">相关知识</a></li>
-    				</ul>
-    			</dt>
-    		</dl></div>
-    <div class="footer" style="margin-bottom:50px;">
-      Copyright © 2017-2027 黄鑫财务管理咨询 版权所有
-      <span><p>苏ICP备10000001号</p></span>
     </div>
-
-
     <nav class="navbar navbar-default navbar-fixed-bottom footer_nav small-nav">
         <div class="foot_nav btn-group dropup">
-            <a  href="tel:133333333">
-                <span class="glyphicon glyphicon-share btn-lg" ><img src="images/ico1.png"></span>
+            <a :href="'tel:' + site.site.stel">
+                <span class="glyphicon glyphicon-share btn-lg" ><img src="../../assets/images/ico1.png"></span>
                手机</a>
         </div>
-        <div class="foot_nav"><a href="sms:133333333"><span class="glyphicon glyphicon-phone btn-lg"><img src="images/ico2.png"></span>短信</a></div>
+        <div class="foot_nav"><a :href="'sms:' + site.site.stel"><span class="glyphicon glyphicon-phone btn-lg"><img src="../../assets/images/ico2.png"></span>短信</a></div>
 
     </nav>
 
   </div>
 </template>
 <script>
+import store from '../../store'
 export default {
-  name: 'footer'
+  name: 'footer',
+  data() {
+    return {
+      site: (typeof (store.state.site) == 'string' && store.state.site!='' )?JSON.parse(store.state.site):store.state.site,
+      list: {},
+      display:false
+    }
+  },
+  created() {
+    let n1 = this.site.nav[4];
+    let n2 = this.site.nav[3];
+    let nav1 = this.site.nav[0]
+    let nav2 = this.site.nav[1]
+    let nav3 = this.site.nav[2]
+    let fw = {
+      'name': '我们的服务',
+      'child': {
+        nav1, nav2, nav3
+      },
+      'show': false
+    }
+    let list = {
+      n1, fw, n2
+    };
+    this.list = list
+
+    console.log(list);
+  },
+  methods: {
+    showList: function(index)
+    {console.log(this.list[index]['show']);
+
+        if(this.list[index]['show'])
+        {
+          this.list[index]['show'] = false;
+        }else {
+          this.list[index]['show'] = true;
+        }
+
+    }
+  }
 }
 </script>

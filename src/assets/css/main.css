@@ -542,7 +542,7 @@ div.swiper-nav {height:46px;margin-top:1em;}
 .videos video {width:100%;}
 /*首页*/.bql_n_banner div.po-a {top:37%;left:3.8%;}
 .bql_n_banner h3 {font-size:15px;border-bottom:2px solid #999;color:#666;line-height:18px;padding:0 0 0.5em 0;}
-.bql_n_banner p {font-size:12px;line-height:23px;color:#666;padding-top:0.8em;}
+.bql_n_banner .p {font-size:12px;line-height:23px;color:#666;padding-top:0.8em;}
 .successful_case {padding-bottom:28px;}
 .successful_case .m_new_content li div.float-r {width:62%;background:none;padding:0;}
 .successful_case li div.float-r h4 {font-size:12px;color:#999;padding-bottom:4px;}

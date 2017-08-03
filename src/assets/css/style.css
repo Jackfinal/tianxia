@@ -98,7 +98,10 @@ Main Components
 }
 
 
-
+.sssssbg0{background:url(../images/a.jpg) no-repeat center center;}
+.sssssbg1{background:url(../images/b.jpg) no-repeat center center;}
+.sssssbg2{background:url(../images/c.jpg) no-repeat center center;}
+.sssssbg3{background:url(../images/d.jpg) no-repeat center center;}
 
 .cd-accordion-menu {width: 100%; max-width: 640px;background: #4d5158;margin: 0 auto;font-family: "宋体";}
 .cd-accordion-menu ul {}
@@ -165,7 +168,7 @@ Main Components
 
 #light .group_label,.cd-accordion-menu .has-children label{background-repeat: no-repeat;  background-position: 92% center; font-family:微软雅黑;}
 .footer_nav{margin-top: 2em;}
-.footer_nav dt{display: none;}
+.footer_nav dt{}
 div.footer_nav dd{background-repeat: no-repeat;  background-position: 98% center;}
 .footer_nav dd{border-bottom:1px solid #ddd;height: 4em;line-height: 4em;color: #fff;font-size: 14px;padding-left: 2%; }
 div.footer_nav dd.cur{background: #f2f2f2 ;}
