@@ -86,7 +86,7 @@ padding: 1em;  text-align: center; border: none;}
 .main_image li .img_2{}
 .main_image li .img_3{}
 .flicking_con{position:absolute;top:160px;left:50%;z-index:999;width:300px;height:21px;margin:20 0 0 -40px;}
-.flicking_con a{float:left;width:21px;height:21px;margin:0;padding:0;background:url('../images/btn_main_imgs.png') 0 0 no-repeat;display:block;text-indent:-1000px}
+.flicking_con a{float:left;width:21px;height:21px;margin:0;padding:0;display:block;text-indent:-1000px}
 .flicking_con a.on{background-position:0 -21px}
 #btn_prev,#btn_next{z-index:11111;position:absolute;display:block;width:73px!important;height:74px!important;top:50%;margin-top:-37px;display:none;}
 /*#btn_prev{background:url(../images/hover_left.png) no-repeat left top;left:100px;}

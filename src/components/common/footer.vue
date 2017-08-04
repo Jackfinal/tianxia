@@ -3,7 +3,7 @@
     <div class="footer_nav">
     		<dl v-for="(item, index) in list">
     			<dd @click="showList(index)">{{item.name}}</dd>
-    			<dt v-show="item.show">
+    			<dt v-show="item.show1">
     				<ul>
     					<li v-for="(citem, i) in item.child">
                 <router-link :to="{ name: 'Page', params: { id:  citem.id }}" v-if="citem.content!=''">{{citem.name}}</router-link>
@@ -51,24 +51,22 @@ export default {
       'child': {
         nav1, nav2, nav3
       },
-      'show': false
+      'show1': false
     }
     let list = {
       n1, fw, n2
     };
     this.list = list
-
-    console.log(list);
   },
   methods: {
     showList: function(index)
-    {console.log(this.list[index]['show']);
+    {
 
-        if(this.list[index]['show'])
+        if(this.list[index]['show1'])
         {
-          this.list[index]['show'] = false;
+          this.list[index]['show1'] = false;
         }else {
-          this.list[index]['show'] = true;
+          this.list[index]['show1'] = true;
         }
 
     }

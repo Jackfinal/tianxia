@@ -1,0 +1,16 @@
+.tab_con{ display:none; padding:0 10px;}
+.tab_con .con_ul{ border-bottom:1px solid #e6e6e6;}
+.tab_con .con_ul li{ border-top:1px solid #e6e6e6; float:left; min-height:70px; padding-top:10px;padding-bottom:10px; position:relative; width:100%;}
+.tab_con .con_ul li dt{ border:1px solid #e0e0e0; border-radius:50%; height:51px; padding:3px; width:51px;}
+.fl{ float:left;}
+.tab_con .con_ul li dt a{ display:block; height:51px; width:51px; overflow:hidden;}
+.tab_con .con_ul li dt a img{ border:0 none; height:auto; max-width:100%; vertical-align:top;}
+.tab_con .con_ul li dd{ margin:0 70px;}
+.tab_con .con_ul li dd h3{  font-size:14px; font-weight:bold; line-height:28px;}
+.tab_con .con_ul li dd h3 a{ color:#444444;}
+.tab_con .con_ul li dd p{ color:#666; font-size:13px; line-height:22px;}
+.tab_con .list_dow{ background-color:white;  font-size:13px; height:30px; line-height:30px; padding:0 14px 0 14px; right:8px; top:22px;
+ border: 0.5px solid #f56400;border-radius: 3px;  font-weight: none !important;color: #f56400;float: left;margin-left: 13px;text-align: center;width: 90px;}
+.abso{ position:absolute;}
+.tab_con .con_ul li dd h3.iphone{ color:#068afb; font-size:14px; font-weight:normal; line-height:28px;}
+.tab_con .con_ul li dd p.iphone{ color:#666; font-size:12px; line-height:22px;}
