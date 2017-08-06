@@ -27,29 +27,50 @@
         </li>
       </ul>
     </div>
-    <div class="download_list">
+    <div class="download_list" v-else-if="id==3">
 
-	<div class="download_list_box" v-if="id==3">
+	<div class="download_list_box">
     <ul class="con_ul clearfix" id="serviceList"
       v-infinite-scroll="loadMore"
       infinite-scroll-disabled="loading"
       :infinite-scroll-distance="num">
-						<a href="tmzr.htm">
+						<router-link v-for="(item, index) in list" :to="{ name: 'Shownew', params: { id:  item.id }}" >
 			<li class="clearfix">
-				<img class="divleft" src="images/tmzr.png" alt="">
+				<img class="divleft" :src="item.thumb" alt="">
 				<div class="dow_list_d">
-					<h3><strong>天猫店铺名称</strong></h3>
+					<h3><strong>{{item.title}}</strong></h3>
 					<span class="display-b">
-						<i>店铺价格：1000RMB</i><br>
-						<i>行业分类：化妆日用</i>
+						<i>店铺价格：{{item.price}}RMB</i><br>
+						<i>行业分类：{{item.xingye}}</i>
 					</span>
-					<p class="overflow-ellipsis">某某天猫店铺简介某某天猫店铺简介某某天猫店铺简介某某天猫店铺简介某某天猫店铺简介某某天猫店铺简介某某天猫店铺简介</p>
+					<p class="overflow-ellipsis">{{item.description}}</p>
 				</div>
 			</li>
-			</a>
+			</router-link>
 
     </ul>
   </div>
+</div>
+
+<div class="tab_con" style="display:block;margin-top: 20px;margin-bottom:22px;" v-else-if="id==4">
+              <ul v-infinite-scroll="loadMore"
+              infinite-scroll-disabled="loading"
+              :infinite-scroll-distance="num" class="con_ul clearfix" id="serviceList">
+
+
+			  <li v-for="(item, index) in list">
+          <dl>
+            <dd style="margin-left:10px; line-height:70px;">
+              <div style="font-size: 14px;font-weight: bold;line-height: 50px;">
+                <span>{{item.title}}</span>
+              </div>
+            </dd>
+          </dl>  <router-link :to="{ name: 'Shownew', params: { id:  item.id }}" class="list_dow abso">了解详情</router-link></li>
+
+
+
+			  </ul>
+            </div>
 
 
     <Footers></Footers>
@@ -60,6 +81,7 @@
 
 <script>
 import '../assets/css/zhuce.css'
+
 import Vue from 'vue'
 import Top from './common/top'
 import banner from './common/banner'
@@ -83,6 +105,19 @@ export default {
       flag: false
     }
   },
+  watch: {
+    '$route' (to, from) {
+     //if(this.id != (this.$route.params.id))
+     //{
+       this.id = this.$route.params.id
+       this.list = {}
+       this.page = 1
+       this.flag = false
+       this.loadMore();
+     //}
+
+   }
+  },
   created() {
     let id = (this.$route.params.id);
     for(let i in this.site.nav)
@@ -95,6 +130,7 @@ export default {
       }
     }
     this.id = id
+
   },
   methods: {
     loadMore() {
@@ -126,6 +162,9 @@ export default {
   },
   components: {
     banner, Top, store, Footers, Toast
-  }
+  },
+  init  : function (){console.log(this.id);
+                alert("销毁前....");
+            },
 }
 </script>

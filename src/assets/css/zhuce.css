@@ -14,3 +14,55 @@
 .abso{ position:absolute;}
 .tab_con .con_ul li dd h3.iphone{ color:#068afb; font-size:14px; font-weight:normal; line-height:28px;}
 .tab_con .con_ul li dd p.iphone{ color:#666; font-size:12px; line-height:22px;}
+
+
+.stare p span.stare_co{
+	color:#F56400; font-size:14px;
+}
+
+.text p {
+	padding: 2px 10px 0px; line-height: 24px; font-size: 13px;
+}
+.text p.c3 {
+	color: rgb(51, 51, 51);
+}
+.text p b {
+	color: rgb(51, 51, 51);
+}
+.text p span {
+	color: #444444;
+
+}
+.stare .srare_we, .srare_we{
+	    font-size: 14px;
+    color: #444444;
+    font-weight: bold;
+    margin-top: 8px;
+    display: inline-block;
+}
+.ser-attention{background:#F98715;
+    display: inline-block;
+    height: 6px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 7px;position: relative;
+    top: -2px;}
+.nchanp_choice{ float:right; width:820px;}
+.choice_o{ float:left; width:100%; }
+.choice_o p select{height:25px;width:114px; margin-left:8px; border:1px solid #e1e1e1;font-family:微软雅黑;}
+.choice_o ul li{ float:none;   line-height:25px;margin-top: 20px;margin-bottom: -5px; width: 200px;}
+.choice_o ul li a, .pj_t ul li a{ color:#484d56; display: block; text-align: center;}
+.choice_o ul{ float:left; position:relative; margin-left: 10px;}
+.cho_r{ margin-right:17px;}
+.choice_o span{ float:left; font-size:20px; position:relative; top:10px; color:#444444;  }
+.cho_btn{ float:right; background:#95bc21; color:white; padding:10px 80px; border-radius:5px; margin-right:10px;}
+.cp_img{ margin:5px 6px; float:left;}
+.cp_imgbox{ width:200px; float:left; border-bottom:1px dashed #e1e1df;}
+.cp_imgbox a{ float:left; line-height:25px; width:130px;}
+.fwtd ul li{ float:left; padding:10px 15px; width:130px;}
+.fwtd ul li img{ margin:0 0 0 18px;}
+.logo_zy{ background:#e74c3c; color: white; padding:3px 5px; float:left; border-radius:3px; position:relative; top:10px; margin-left:40px;}
+.logo_yh{ background:#e74c3c; color: white; padding:3px 5px; border-radius:3px; position:relative;font-size:12px;}
+.choice_o ul li a{border:1px solid #e1e1e1;}
+.choice_o ul li a.cho_hover{ background:#F98715; color:white; width: 200px; border:none;} */
+.dljz_npbtwo td table.dljz_none td{ padding:0;}

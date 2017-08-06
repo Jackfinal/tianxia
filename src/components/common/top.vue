@@ -23,7 +23,7 @@
       				</ul>
             </li>
             <li v-else >
-              <router-link :to="{ name: 'Shoplist', params: { id:  item.id }}" :id="'lia'">{{item.name}}</router-link>
+              <router-link :to="{ name: 'Shoplist', params: { id:  item.id }}" :id="'lia'" >{{item.name}}</router-link>
             </li>
 
       		</ul>
