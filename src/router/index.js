@@ -5,6 +5,8 @@ import Page from '@/components/Page'
 import Newlist from '@/components/Newlist'
 import Shownew from '@/components/Shownew'
 import Shoplist from '@/components/Shoplist'
+import User from '@/components/User'
+import UserScore from '@/components/UserScore'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +35,16 @@ export default new Router({
       path: '/Shoplist/:id',
       name: 'Shoplist',
       component: Shoplist
+    },
+    {
+      path: '/User',
+      name: 'User',
+      component: User
+    },
+    {
+      path: '/UserScore',
+      name: 'UserScore',
+      component: UserScore
     }
   ]
 })

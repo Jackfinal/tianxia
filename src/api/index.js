@@ -120,6 +120,9 @@ export function GetList(data){
 export function GetUser(data){
   return fetch('User.getBaseInfo',data);
 }
+export function GetScore(data){
+  return fetch('User.GetScore',data);
+}
 //图片上传
 export function uploader(data) {
    return fetch('Default.UploadBase64', data)

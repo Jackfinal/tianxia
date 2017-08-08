@@ -1,15 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
+let site = localStorage.getItem('site');
+let user = localStorage.getItem('user');
 
 export default new Vuex.Store({
   state: {
     accessToken: localStorage.getItem('accessToken') || '',
-    user: JSON.parse(localStorage.getItem('user')) || '',
+    user: !user?'':JSON.parse(user) || '',
     //user: '',
     loading: false,
     showFooter: true,
-    site: JSON.parse(localStorage.getItem('site')) || [],
+    site: !site?'':JSON.parse(site) || [],
 
   },
   mutations: {
