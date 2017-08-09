@@ -7,6 +7,7 @@ import Shownew from '@/components/Shownew'
 import Shoplist from '@/components/Shoplist'
 import User from '@/components/User'
 import UserScore from '@/components/UserScore'
+import UserAccount from '@/components/UserAccount'
 Vue.use(Router)
 
 export default new Router({
@@ -45,6 +46,11 @@ export default new Router({
       path: '/UserScore',
       name: 'UserScore',
       component: UserScore
+    },
+    {
+      path: '/UserAccount',
+      name: 'UserAccount',
+      component: UserAccount
     }
   ]
 })

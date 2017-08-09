@@ -66,3 +66,15 @@
 .choice_o ul li a{border:1px solid #e1e1e1;}
 .choice_o ul li a.cho_hover{ background:#F98715; color:white; width: 200px; border:none;} */
 .dljz_npbtwo td table.dljz_none td{ padding:0;}
+
+
+.wdzh_box{ width:98%; margin:0 auto; background:white; border:1px solid #D0D0D0; border-radius:4px; padding:5px;}
+.wdzh_box span{ color:#F98715; font-size:18px; font-weight:bold; margin-right:5px;}
+.wdzh_box p{ font-size:14px; margin:10px 0;}
+.wdzh_boxtwo{ width:100%;}
+.wdzh_boxtwo p{ font-size:14px;}
+.wdzh_boxtwo td{ padding:5px 8px; border-bottom:1px dashed rgb(221, 221, 221);}
+.wdzh_boxtwo span{color: #d92a00; font-size: 18px;}
+.wdzh_bottombtn{ width:100%; border-top:1px solid rgb(221, 221, 221); height:40px; background:white;}
+.wdzh_btnn{ padding: 5px; text-align: center;}
+.wdzh_bottombtn button{-moz-appearance: none; -moz-user-select: none; background:#F56400; border: medium none; border-radius: 3px; color: white; display: block; font-size: 1em; font-weight: normal; line-height: 1; padding: 1em; text-align: center; width: 100%;}

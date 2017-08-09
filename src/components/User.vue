@@ -29,10 +29,10 @@
             <tbody>
               <tr>
                 <td align="center" style="width:33.3%;">
-                  <a href="wdzh.htm">
+                  <router-link :to="{ name: 'UserAccount' }">
 	                  <img src="../assets/images/mycount.png"/>
 	                  <h3>我的账户</h3>
-                  </a>
+                  </router-link>
                 </td>
                 <td align="center" width="33.3%">
                 	<a href="wddd.htm">

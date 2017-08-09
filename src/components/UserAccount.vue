@@ -17,15 +17,15 @@
           </tr>
           <tr>
             <td colspan="2" align="center" style="width: auto;">
-              <p class="wdzh_nc" style="font-size:20px;">我的积分</p>
+              <p class="wdzh_nc" style="font-size:20px;">我的余额</p>
             </td>
           </tr>
           <tr>
             <td align="center" style="width: auto;">
-              <p style="line-height:25px; font-size:14px;">当前积分<br><span id="myMoney" v-text="user.experience">0</span>分</p>
+              <p style="line-height:25px; font-size:14px;">我的余额<br><span id="myMoney" v-text="'¥'+user.money">¥ 0</span>元</p>
             </td>
             <td align="center" style="width: auto;">
-              <p style="line-height:25px; font-size:14px;">可兑换积分<br><span id="canWithdraw" v-text="user.score">0</span>分</p>
+              <p style="line-height:25px; font-size:14px;">可提现的余额<br><span id="canWithdraw" v-text="'¥'+user.money">¥ 0</span>元</p>
             </td>
           </tr>
         </tbody>
@@ -35,14 +35,14 @@
         <tbody>
           <tr>
             <td class="indexthr_back" style="background-color: rgb(96, 99, 105); width: auto;">
-              <span style="font-size:16px; color:white;">积分明细</span>
+              <span style="font-size:16px; color:white;">账户明细</span>
             </td>
           </tr>
         </tbody>
       </table>
 
       <table class="wdzh_boxtwo" cellspacing="0" cellpadding="0" style="width: 100%; margin: 5px auto 0px; border: 1px solid rgb(221, 221, 221);">
-        <tbody id="rewardDetail" v-infinite-scroll="GetScore"
+        <tbody id="rewardDetail" v-infinite-scroll="GetAccount"
         infinite-scroll-disabled="loading"
         :infinite-scroll-distance="num"><!-- 奖励明细 -->
 
@@ -60,6 +60,23 @@
         </tbody>
       </table>
 
+      <table class="wdzh_bottombtn" style="border: 0px; width: 100%;" cellspacing="0" cellpadding="0">
+            <tbody>
+               <tr>
+                 <td style="width: auto;">
+                   <div class="wdzh_btnn">
+                     <button class="yysjs_btn" type="button" @click="ApplyMoney()" style="font-family: Microsoft YaHei; ">申请提现（限一天一次）</button>
+                   </div>
+                 </td>
+                 <td width="30%" style="width: auto;">
+                   <div class="wdzh_btnn">
+                     <button style="background:#F7CB16;color:white; " id="Recharge" class="yysjs_btn" type="button" @click="Recharge()">充值</button>
+                   </div>
+                 </td>
+               </tr>
+            </tbody>
+          </table>
+
     </div>
         <Footers></Footers>
   </div>
@@ -72,10 +89,10 @@ import '../assets/css/style2.css'
 import Top from './common/top'
 import Footers from './common/footer'
 import store from '../store'
-import { GetScore } from '../api';
-import { InfiniteScroll, Toast } from 'mint-ui';
+import { GetAccount, ApplyMoney } from '../api';
+import { InfiniteScroll, Toast, MessageBox } from 'mint-ui';
 export default {
-  name: 'UserScore',
+  name: 'UserACCount',
   data() {
     return {
       user: (typeof (store.state.user) == 'string' && store.state.user!='')?JSON.parse(store.state.user):store.state.user,
@@ -93,10 +110,33 @@ export default {
   created() {
   },
   methods: {
-    GetScore() {console.log(this.page);
+    ApplyMoney() {
+      MessageBox.prompt('请输入提现的金额(单位：元)').then(({ value, action }) => {
+        let m = this.toDecimal2(value);
+        if(m > this.user.money)
+        {
+          Toast('余额不足！');
+          return false;
+        }
+        if(action == 'confirm')
+        {
+          //发送提现申请
+          ApplyMoney({ userid: this.user.uid, value: m }).then(res=> {
+            if(res > 0)
+            {
+              Toast('申请成功！请等待客服打款');
+            }else {
+              Toast('申请失败！请联系客服');
+            }
+
+          })
+        }
+      });
+    },
+    GetAccount() {
       this.loading = true;
       if(this.flag)return false;
-      GetScore({ page: this.page, userid: this.user.uid, limit: this.num }).then(res=> {
+      GetAccount({ page: this.page, userid: this.user.uid, limit: this.num }).then(res=> {
         this.loading = false;
         if(res == '')
         {
@@ -117,6 +157,23 @@ export default {
         this.page += 1
       })
     },
+    toDecimal2(x) {
+       var f = parseFloat(x);
+       if (isNaN(f)) {
+        return '0.00';
+       }
+       var f = Math.round(x*100)/100;
+       var s = f.toString();
+       var rs = s.indexOf('.');
+       if (rs < 0) {
+        rs = s.length;
+        s += '.';
+       }
+       while (s.length <= rs + 2) {
+        s += '0';
+       }
+       return s;
+      }
 
 
   }

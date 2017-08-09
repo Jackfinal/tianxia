@@ -94,7 +94,7 @@ export default {
           });
           this.flag = true
           return '';
-        }console.log(this.list);
+        }
         if(this.page == 1)
         {
           this.list = res;

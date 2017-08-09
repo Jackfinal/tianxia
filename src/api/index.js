@@ -123,6 +123,13 @@ export function GetUser(data){
 export function GetScore(data){
   return fetch('User.GetScore',data);
 }
+export function GetAccount(data){
+  return fetch('User.GetAccount',data);
+}
+//提现申请
+export function ApplyMoney(data){
+  return fetch('User.ApplyMoney',data);
+}
 //图片上传
 export function uploader(data) {
    return fetch('Default.UploadBase64', data)
