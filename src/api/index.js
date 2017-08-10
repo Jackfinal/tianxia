@@ -130,6 +130,12 @@ export function GetAccount(data){
 export function ApplyMoney(data){
   return fetch('User.ApplyMoney',data);
 }
+export function GetOrders(data){
+  return fetch('User.GetOrders',data);
+}
+export function CacelOrders(data){
+  return fetch('User.CacelOrders',data);
+}
 //图片上传
 export function uploader(data) {
    return fetch('Default.UploadBase64', data)
