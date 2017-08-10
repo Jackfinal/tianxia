@@ -35,10 +35,10 @@
                   </router-link>
                 </td>
                 <td align="center" width="33.3%">
-                	<a href="wddd.htm">
+                	<router-link :to="{ name: 'UserOrders' }">
                   	<img src="../assets/images/myorder.png"/>
                   	<h3>我的订单</h3>
-                  </a>
+                  </router-link>
                 </td>
                 <td align="center" width="33.3%">
 	                <router-link :to="{ name: 'UserScore' }">
@@ -49,10 +49,10 @@
               </tr>
               <tr>
 			  <td align="center" width="33.3%">
-                <a href="xfjl.htm">
+                <router-link :to="{ name: 'UserAccount' , params: { id:  1 } }">
                   <img src="../assets/images/operate.png"/>
                   <h3>消费记录</h3>
-                  </a>
+                  </router-link>
                   </td>
 
                 <td align="center" width="33.3%">

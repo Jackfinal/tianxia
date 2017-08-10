@@ -87,16 +87,14 @@ a.btn_usual, a.btn_press
 }
 a.btn_usual
 {
-    background-image: url('../../images/btn_usual.png');
     background-repeat: no-repeat;
 }
 a.btn_press
 {
-    background-image: url('../../images/btn_press.png');
     background-repeat: no-repeat;
 }
 
- 
+
 body > div[selected="true"]
 {
     display: block;
@@ -115,7 +113,6 @@ body > div[selected="true"]
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: url('../../images/waiting.png');
     background-size: 16px 16px;
     -webkit-background-size: 16px 16px;
     -moz-background-size: 16px 16px;
@@ -353,7 +350,7 @@ select.select100px
     width: 34px;
     height: 26px;
     display: block;
-    background-image: url('../../images/button_icon.png');
+
     background-repeat: no-repeat;
 }
 .linkSearch span
@@ -369,37 +366,7 @@ select.select100px
     text-shadow: 1px 1px 1px #3a6488;
 }
 
-/*notice & mask*/
-#ajax_gm_shadow
-{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    background-color: Transparent;
-}
-#ajax_gm_notice
-{
-    position: fixed;
-    padding: 15px 15px;
-    top: 60px;
-    left: 100px;
-    border-radius: 6px;
-    z-index: 10001;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    background: url('../../images/gm_notice_bg.png') repeat;
-    width: auto;
-}
-#ajax_gm_notice .loading
-{
-    padding-top: 40px;
-    display: block;
-    background: url('../../images/gm_notice_loading.gif') no-repeat top center;
-}
+
 
 /*responsive*/
 @media only screen and (max-width:320px)
@@ -424,7 +391,6 @@ select.select100px
         background-size: auto 44px;
         -webkit-background-size: auto 44px;
         -moz-background-size: auto 44px;
-        background: url('../images/titlebar.png') repeat-x;
     }
 }
 

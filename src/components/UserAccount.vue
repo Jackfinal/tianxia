@@ -35,7 +35,8 @@
         <tbody>
           <tr>
             <td class="indexthr_back" style="background-color: rgb(96, 99, 105); width: auto;">
-              <span style="font-size:16px; color:white;">账户明细</span>
+              <span style="font-size:16px; color:white;" v-if="type == 0">账户明细</span>
+              <span style="font-size:16px; color:white;" v-else>消费记录</span>
             </td>
           </tr>
         </tbody>
@@ -60,7 +61,7 @@
         </tbody>
       </table>
 
-      <table class="wdzh_bottombtn" style="border: 0px; width: 100%;" cellspacing="0" cellpadding="0">
+      <table class="wdzh_bottombtn" style="border: 0px; width: 100%;" cellspacing="0" cellpadding="0" v-if="type == 0">
             <tbody>
                <tr>
                  <td style="width: auto;">
@@ -92,7 +93,7 @@ import store from '../store'
 import { GetAccount, ApplyMoney } from '../api';
 import { InfiniteScroll, Toast, MessageBox } from 'mint-ui';
 export default {
-  name: 'UserACCount',
+  name: 'UserAccount',
   data() {
     return {
       user: (typeof (store.state.user) == 'string' && store.state.user!='')?JSON.parse(store.state.user):store.state.user,
@@ -100,7 +101,8 @@ export default {
       list: {},
       loading: false,
       num: 10,
-      flag: false
+      flag: false,
+      type: 0
     }
 
   },
@@ -108,6 +110,7 @@ export default {
     Top,Footers
   },
   created() {
+    this.type = (this.$route.params.id);
   },
   methods: {
     ApplyMoney() {
@@ -136,7 +139,7 @@ export default {
     GetAccount() {
       this.loading = true;
       if(this.flag)return false;
-      GetAccount({ page: this.page, userid: this.user.uid, limit: this.num }).then(res=> {
+      GetAccount({ page: this.page, userid: this.user.uid, type:this.type, limit: this.num }).then(res=> {
         this.loading = false;
         if(res == '')
         {

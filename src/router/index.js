@@ -8,6 +8,7 @@ import Shoplist from '@/components/Shoplist'
 import User from '@/components/User'
 import UserScore from '@/components/UserScore'
 import UserAccount from '@/components/UserAccount'
+import UserOrders from '@/components/UserOrders'
 Vue.use(Router)
 
 export default new Router({
@@ -51,6 +52,16 @@ export default new Router({
       path: '/UserAccount',
       name: 'UserAccount',
       component: UserAccount
+    },
+    {
+      path: '/UserAccount/:id',
+      name: 'UserAccount',
+      component: UserAccount
+    },
+    {
+      path: '/UserOrders',
+      name: 'UserOrders',
+      component: UserOrders
     }
   ]
 })
