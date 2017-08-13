@@ -126,6 +126,10 @@ export function GetScore(data){
 export function GetAccount(data){
   return fetch('User.GetAccount',data);
 }
+//发送验证码
+export function GetCode(data){
+  return fetch('User.GetCode',data);
+}
 //提现申请
 export function ApplyMoney(data){
   return fetch('User.ApplyMoney',data);
@@ -142,7 +146,7 @@ export function uploader(data) {
 }
 //更新会员字段
 export function saveField(data) {
-  return fetch('User.saveField', data)
+  return fetch('User.saveField1', data)
 }
 
 export function getArea(){

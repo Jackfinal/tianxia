@@ -18,7 +18,37 @@ Vue.directive('title', {
 })
 Vue.config.productionTip = false
 
-
+//执行请求微信登录
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (store.state.accessToken && store.state.user.uid && store.state.user.ismobile == 1 && store.state.user.phone) {
+      next()
+    } else {
+      next({
+        path: '/login',
+        query: { redirect: to.fullPath }
+      })
+    }
+  } else {
+    next()
+  }
+  /*
+  if(to.name != 'login' && to.name != 'weixin')
+  {
+    let user = store.state.user;
+    //let user = {id:null};
+    if (user && user.id) {
+      next();
+    } else {
+      next({
+        path:'/login',
+        query:''
+      })
+    }
+  }else{
+    next();
+  }*/
+})
 
 /* eslint-disable no-new */
 new Vue({

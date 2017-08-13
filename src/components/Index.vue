@@ -14,18 +14,20 @@
     	<ul class="tuijian">
     		<li>
     			<img src="../assets/images/pic1.jpg" class="img-responsive"></li>
-    		<li><a href="shoplist/1" target="_blank">
-    			<img src="../assets/images/pic2.jpg" class="img-responsive"></a></li>
-    		<li><a href="shoplist/2" target="_blank">
-    			<img src="../assets/images/pic3.jpg" class="img-responsive"></a></li>
+    		<li>
+          <router-link :to="{ name: 'Shoplist', params: { id:  1 }}">
+    			<img src="../assets/images/pic2.jpg" class="img-responsive"></router-link>
+        </li>
+    		<li><router-link :to="{ name: 'Shoplist', params: { id:  3 }}">
+    			<img src="../assets/images/pic3.jpg" class="img-responsive"></router-link></li>
     		<div class="clear">
     		</div>
-    		<li><a href="shoplist/3" target="_blank">
-    			<img src="../assets/images/pic4.jpg" class="img-responsive"></a></li>
-    		<li><a href="shoplist/12" target="_blank">
-    			<img src="../assets/images/pic5.jpg" class="img-responsive"></a></li>
-    		<li><a href="javascript:void(0);" target="_blank">
-    			<img src="../assets/images/pic6.jpg" class="img-responsive"></a></li>
+    		<li><router-link :to="{ name: 'Shoplist', params: { id:  4 }}">
+    			<img src="../assets/images/pic4.jpg" class="img-responsive"></router-link></li>
+    		<li><router-link :to="{ name: 'Shoplist', params: { id:  12 }}">
+    			<img src="../assets/images/pic5.jpg" class="img-responsive"></router-link></li>
+    		<li><router-link :to="{ name: 'Shoplist'}">
+    			<img src="../assets/images/pic6.jpg" class="img-responsive"></router-link></li>
     		<div class="clear">
     		</div>
     	</ul>
@@ -53,7 +55,8 @@
   							<div class="bt1">{{item.title}}</div>
   							<div class="bt2">{{item.description}}</div>
   							<div class="bt3">价格：<span>{{item.price}}RMB</span></div>
-  							<a :href="'service/'+item.id" style="	float:right;"><div class="bt4">查看详情</div></a>
+                <router-link :to="{ name: 'Shownew', params: { id:  item.id }}" style="	float:right;">
+  							<div class="bt4">查看详情</div></router-link>
   						</div>
   					</dl>
           </div>
@@ -93,7 +96,7 @@
 	</div>
 		<ul class="m_new_content">
 				<li class="clearfix" v-for="(item, index) in list">
-			<a href="news.htm">
+			<router-link :to="{ name: 'Shownew', params: { id:  item.id }}">
 				<div class="float-l">
 					<img width="100%" :src="item.thumb" alt="">
 				</div>
@@ -106,7 +109,7 @@
 		{{item.description}}
 					</p>
 				</div>
-			</a>
+			</router-link>
 		</li>
 	</ul>
 

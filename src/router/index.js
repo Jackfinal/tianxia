@@ -9,6 +9,7 @@ import User from '@/components/User'
 import UserScore from '@/components/UserScore'
 import UserAccount from '@/components/UserAccount'
 import UserOrders from '@/components/UserOrders'
+import Login from '@/components/Login'
 Vue.use(Router)
 
 export default new Router({
@@ -39,29 +40,39 @@ export default new Router({
       component: Shoplist
     },
     {
+      path: '/Login',
+      name: 'Login',
+      component: Login
+    },
+    {
       path: '/User',
       name: 'User',
-      component: User
+      component: User,
+      meta: { requiresAuth: true }
     },
     {
       path: '/UserScore',
       name: 'UserScore',
-      component: UserScore
+      component: UserScore,
+      meta: { requiresAuth: true }
     },
     {
       path: '/UserAccount',
       name: 'UserAccount',
-      component: UserAccount
+      component: UserAccount,
+      meta: { requiresAuth: true }
     },
     {
       path: '/UserAccount/:id',
       name: 'UserAccount',
-      component: UserAccount
+      component: UserAccount,
+      meta: { requiresAuth: true }
     },
     {
       path: '/UserOrders',
       name: 'UserOrders',
-      component: UserOrders
+      component: UserOrders,
+      meta: { requiresAuth: true }
     }
   ]
 })

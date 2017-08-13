@@ -100,7 +100,7 @@ export default {
   },
   methods: {
     GetInfo() {
-      GetUser({userid:1}).then(res=> {
+      GetUser({userid:this.user.uid}).then(res=> {
         this.user = res;
         store.dispatch('saveUser', res)
         console.log(store.state.user)
