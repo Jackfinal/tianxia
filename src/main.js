@@ -17,7 +17,7 @@ Vue.directive('title', {
   }
 })
 Vue.config.productionTip = false
-
+localStorage.removeItem('user');
 //执行请求微信登录
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {

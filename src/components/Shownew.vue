@@ -7,7 +7,7 @@
     </div>
     <div class="abtextbox" style="padding-top:10px;" v-html="info.content">
     </div>
-    <div class="text" v-if="info.id == 1">
+    <div class="text" v-if="content.catid == 1">
            <!-- 2016-01-11  新增开始 -->
            <p><span class="srare_we" id="remarkChose">我们的产品（切换选项查看价格变化）</span></p>
 
@@ -70,7 +70,10 @@
 
 
     <Footers></Footers>
-
+    <actionsheet
+      :actions="actions"
+      v-model="sheetVisible">
+    </actionsheet>
   </div>
 </template>
 
@@ -79,23 +82,26 @@ import Top from './common/top'
 import banner from './common/banner'
 import Footers from './common/footer'
 import store from '../store'
-import { InfiniteScroll } from 'mint-ui';
+import { InfiniteScroll, Actionsheet } from 'mint-ui';
 import { GetInfo } from '../api'
 export default {
   name: 'Shownew',
   data () {
+    let user = (typeof (store.state.user) == 'string' && store.state.user!='')?JSON.parse(store.state.user):store.state.user;
     return {
       info: {},
       site: (typeof (store.state.site) == 'string' && store.state.site!='' )?JSON.parse(store.state.site):store.state.site,
+      user: user,
       content: {},
       isActiveGK: '',
       activeName: '',
-      lastp: 0
+      lastp: 0,
+      actions: [ {name: '余额（剩余：' + user.money + '）', methods: '' }, {name:'在线支付', methods: ''} ],
+      sheetVisible: false
     }
   },
   created() {
     let id = (this.$route.params.id);
-
     this.loadMore(id);
 
 
@@ -104,9 +110,10 @@ export default {
     orderby() {
       if(!this.user.uid)
       {
-        router.push({ name: 'login'})
+        this.$router.push({ name: 'Login'})
       }
-      
+      this.sheetVisible = true;
+
     },
     loadMore(id) {
       if(!id)return false;
@@ -144,7 +151,7 @@ export default {
     }
   },
   components: {
-    banner, Top, store, Footers, InfiniteScroll
+    banner, Top, store, Footers, InfiniteScroll, Actionsheet
   }
 }
 </script>

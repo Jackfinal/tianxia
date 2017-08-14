@@ -75,7 +75,7 @@ export default {
     })
 
     this.redirect = (this.$route.query.redirect);
-    if(!this.redirect)this.redirect = '/'
+    if(!this.redirect)this.redirect = '/User'
     let code = this.getQueryString('code');
     if(this.user.ismobile == 1 && this.user.phone)
     {
@@ -102,7 +102,7 @@ export default {
         //判断是否手机验证
         if(res.ismobile == 1 && res.phone)
         {
-          router.push(this.redirect)
+          this.$router.push(this.redirect)
         }
         setTimeout(this.lasttime, 1000);
         Indicator.close();

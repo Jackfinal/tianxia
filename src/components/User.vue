@@ -29,7 +29,7 @@
             <tbody>
               <tr>
                 <td align="center" style="width:33.3%;">
-                  <router-link :to="{ name: 'UserAccount' }">
+                  <router-link :to="{ name: 'UserAccount', params: { id: 0 } }">
 	                  <img src="../assets/images/mycount.png"/>
 	                  <h3>我的账户</h3>
                   </router-link>
@@ -103,7 +103,6 @@ export default {
       GetUser({userid:this.user.uid}).then(res=> {
         this.user = res;
         store.dispatch('saveUser', res)
-        console.log(store.state.user)
       })
     },
     openAlbum() {

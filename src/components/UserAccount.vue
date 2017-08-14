@@ -90,7 +90,7 @@ import '../assets/css/style2.css'
 import Top from './common/top'
 import Footers from './common/footer'
 import store from '../store'
-import { GetAccount, ApplyMoney } from '../api';
+import { GetAccount, ApplyMoney, Recharge } from '../api';
 import { InfiniteScroll, Toast, MessageBox } from 'mint-ui';
 export default {
   name: 'UserAccount',
@@ -113,6 +113,47 @@ export default {
     this.type = (this.$route.params.id);
   },
   methods: {
+    Recharge() {
+      MessageBox.prompt('请输入充值的金额(单位：元)').then(({ value, action }) => {
+        let m = this.toDecimal2(value);
+        if(action == 'confirm')
+        {
+          //发送提现申请
+          Recharge({ userid: this.user.uid, value: m, openid: this.user.openid }).then(res=> {console.log(res);
+            if (typeof WeixinJSBridge == "undefined"){
+               if( document.addEventListener ){
+                   document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+               }else if (document.attachEvent){
+                   document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                   document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+               }
+            }else{
+               this.onBridgeReady(res);
+            }
+
+          })
+        }
+      });
+    },
+    onBridgeReady:function(result) {
+      let id = result.id;
+      delete result.id;
+      let _this = this;
+      WeixinJSBridge.invoke(
+       'getBrandWCPayRequest',  result,
+         function(res){
+             if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+               weiXinPaySuccess({id:id,openid:_this.user.openid}).then(res=> function(){
+
+               })
+               Toast('支付成功！');
+
+             }else {
+               Toast('支付失败，请稍后再试！');
+             }
+         }
+     );
+   },
     ApplyMoney() {
       MessageBox.prompt('请输入提现的金额(单位：元)').then(({ value, action }) => {
         let m = this.toDecimal2(value);

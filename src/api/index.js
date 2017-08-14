@@ -134,6 +134,10 @@ export function GetCode(data){
 export function ApplyMoney(data){
   return fetch('User.ApplyMoney',data);
 }
+//充值
+export function Recharge(data){
+  return fetch('User.Recharge',data);
+}
 export function GetOrders(data){
   return fetch('User.GetOrders',data);
 }

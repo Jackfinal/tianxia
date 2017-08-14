@@ -73,6 +73,14 @@ export default new Router({
       name: 'UserOrders',
       component: UserOrders,
       meta: { requiresAuth: true }
+    },
+    {
+      path: '/Clear',
+      name: 'Clear',
+      redirect: to => {
+        localStorage.removeItem('user');
+        return '/'
+      }
     }
   ]
 })

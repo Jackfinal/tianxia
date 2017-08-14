@@ -7,7 +7,7 @@
     <form id="OrderForm" method="post" style="font-family:微软雅黑">
             <div id="TitleBar" class="titleBar">
                 <span id="p_Title">
-                    我的订单共<span id="total" v-text="list[0]['countNumber']">0</span>条(第<span id="index" v-text="page">1</span>条)
+                    我的订单共<span id="total" v-if="list[0]" v-text="list[0]['countNumber']">0</span>条(第<span id="index" v-text="page">1</span>条)
                 </span>
             </div>
             <div id="WaitingBlock" selected="true">

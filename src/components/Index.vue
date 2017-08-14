@@ -136,7 +136,7 @@ export default {
   components: {
     Top, Footers, GetIndex, Swipe, SwipeItem, TabContainer, TabContainerItem, Navbar, TabItem
   },
-  created() {
+  created() {console.log(store.state.user);
     GetIndex().then(res=> {
       this.site = res;
       store.dispatch('saveSite', this.site)
