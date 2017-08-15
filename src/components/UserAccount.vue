@@ -110,7 +110,11 @@ export default {
     Top,Footers
   },
   created() {
-    this.type = (this.$route.params.id);
+    if(this.$route.params.id)
+    {
+      this.type = (this.$route.params.id);
+    }
+
   },
   methods: {
     Recharge() {
