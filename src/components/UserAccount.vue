@@ -143,10 +143,16 @@ export default {
        'getBrandWCPayRequest',  result,
          function(res){
              if(res.err_msg == "get_brand_wcpay_request:ok" ) {
-               weiXinPaySuccess({id:id,openid:_this.user.openid}).then(res=> function(){
-
-               })
                Toast('支付成功！');
+               Indicator.open('加载中...');
+               setTimeout(function(){
+                 weiXinPaySuccess( { id: id, openid: _this.user.openid, userid: _this.user.uid } ).then(res=> function(){
+                   _this.user = res
+                   Indicator.close();
+                 })
+               },4000);
+
+
 
              }else {
                Toast('支付失败，请稍后再试！');
