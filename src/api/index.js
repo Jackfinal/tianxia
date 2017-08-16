@@ -181,3 +181,8 @@ export function getCreditsLog(data)
 {
   return fetch('User.getCreditsLog', data, true)
 }
+//提交表单
+export function addNewsForm(data)
+{
+  return fetch('User.addNewsForm', data, true)
+}

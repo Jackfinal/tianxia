@@ -42,6 +42,23 @@
         </tbody>
       </table>
 
+
+      <table class="wdzh_bottombtn" style="border: 0px; width: 100%;" cellspacing="0" cellpadding="0" v-if="type == 0">
+            <tbody>
+               <tr>
+                 <td style="width: auto;">
+                   <div class="wdzh_btnn">
+                     <button class="yysjs_btn" type="button" @click="ApplyMoney()" style="font-family: Microsoft YaHei; ">申请提现（限一天一次）</button>
+                   </div>
+                 </td>
+                 <td width="30%" style="width: auto;">
+                   <div class="wdzh_btnn">
+                     <button style="background:#F7CB16;color:white; " id="Recharge" class="yysjs_btn" type="button" @click="Recharge()">充值</button>
+                   </div>
+                 </td>
+               </tr>
+            </tbody>
+          </table>
       <table class="wdzh_boxtwo" cellspacing="0" cellpadding="0" style="width: 100%; margin: 5px auto 0px; border: 1px solid rgb(221, 221, 221);">
         <tbody id="rewardDetail" v-infinite-scroll="GetAccount"
         infinite-scroll-disabled="loading"
@@ -61,22 +78,7 @@
         </tbody>
       </table>
 
-      <table class="wdzh_bottombtn" style="border: 0px; width: 100%;" cellspacing="0" cellpadding="0" v-if="type == 0">
-            <tbody>
-               <tr>
-                 <td style="width: auto;">
-                   <div class="wdzh_btnn">
-                     <button class="yysjs_btn" type="button" @click="ApplyMoney()" style="font-family: Microsoft YaHei; ">申请提现（限一天一次）</button>
-                   </div>
-                 </td>
-                 <td width="30%" style="width: auto;">
-                   <div class="wdzh_btnn">
-                     <button style="background:#F7CB16;color:white; " id="Recharge" class="yysjs_btn" type="button" @click="Recharge()">充值</button>
-                   </div>
-                 </td>
-               </tr>
-            </tbody>
-          </table>
+
 
     </div>
         <Footers></Footers>
@@ -90,7 +92,7 @@ import '../assets/css/style2.css'
 import Top from './common/top'
 import Footers from './common/footer'
 import store from '../store'
-import { GetAccount, ApplyMoney, Recharge } from '../api';
+import { GetAccount, ApplyMoney, Recharge, weiXinPaySuccess } from '../api';
 import { InfiniteScroll, Toast, MessageBox } from 'mint-ui';
 export default {
   name: 'UserAccount',
@@ -102,7 +104,8 @@ export default {
       loading: false,
       num: 10,
       flag: false,
-      type: 0
+      type: 0,
+      m: 0
     }
 
   },
@@ -115,15 +118,17 @@ export default {
       this.type = (this.$route.params.id);
     }
 
+
   },
   methods: {
     Recharge() {
       MessageBox.prompt('请输入充值的金额(单位：元)').then(({ value, action }) => {
         let m = this.toDecimal2(value);
+        this.m = m
         if(action == 'confirm')
         {
-          //发送提现申请
-          Recharge({ userid: this.user.uid, value: m, openid: this.user.openid }).then(res=> {console.log(res);
+
+          Recharge({ userid: this.user.uid, value: m, openid: this.user.openid }).then(res=> {
             if (typeof WeixinJSBridge == "undefined"){
                if( document.addEventListener ){
                    document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
@@ -147,16 +152,13 @@ export default {
        'getBrandWCPayRequest',  result,
          function(res){
              if(res.err_msg == "get_brand_wcpay_request:ok" ) {
-               Toast('支付成功！');
-               Indicator.open('加载中...');
-               setTimeout(function(){
-                 weiXinPaySuccess( { id: id, openid: _this.user.openid, userid: _this.user.uid } ).then(res=> function(){
-                   _this.user = res
-                   Indicator.close();
-                 })
-               },4000);
+               _this.xx = parseFloat(_this.user.money) + parseFloat(_this.m);
+               _this.user.money = _this.xx;
+               weiXinPaySuccess( { id: id, openid: _this.user.openid, userid: _this.user.uid } ).then(res=> function(){_this.xx = JSON.stringify(res);
+                 store.dispatch('saveUser', res)
+                  _this.user.money = res.money;
 
-
+               })
 
              }else {
                Toast('支付失败，请稍后再试！');
@@ -228,9 +230,8 @@ export default {
        }
        return s;
       }
-
-
   }
+
 
 
 }

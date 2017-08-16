@@ -102,7 +102,7 @@ export default {
         //判断是否手机验证
         if(res.ismobile == 1 && res.phone)
         {
-          this.$router.push( { name: this.redirect } )
+          this.$router.push( { path: '/' + this.redirect } )
         }
         setTimeout(this.lasttime, 1000);
         Indicator.close();

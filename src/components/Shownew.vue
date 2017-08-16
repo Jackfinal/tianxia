@@ -62,6 +62,12 @@
     		<h4>{{content.title}}</h4>
     		<h5>上传于：{{content.updatetime}}</h5>
     	</div>
+      <div class="" v-if="content.catid == 3 || content.catid == 4">
+      <p style="display: inline-block;margin-top: 10px;">
+          价格： <span id="price" class="span1" style="font-size:16px;color:#F56400;">{{content.price}}元</span>
+      </p>
+      <p class="tc pb22" style="padding:10px;"><input type="button" @click="orderby();" style="width:100%;background:#f56400 !important;color:#fff;border: 1px solid #FFF !important;" class="reg-btn msf" value="立即购买"></p>
+    </div>
     	<div align="justify" v-html="content.content">
 
       </div>
@@ -111,6 +117,10 @@ export default {
       if(!this.user.uid)
       {
         this.$router.push({ name: 'Login'})
+      }
+      if(this.content.catid == 1)
+      {
+        this.$router.push({ name: 'Newform', params:{ id: this.content.id } })
       }
       this.sheetVisible = true;
 

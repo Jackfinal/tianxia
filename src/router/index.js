@@ -10,6 +10,7 @@ import UserScore from '@/components/UserScore'
 import UserAccount from '@/components/UserAccount'
 import UserOrders from '@/components/UserOrders'
 import Login from '@/components/Login'
+import Newform from '@/components/Newform'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +34,12 @@ export default new Router({
       path: '/Shownew/:id',
       name: 'Shownew',
       component: Shownew
+    },
+    {
+      path: '/Newform/:id',
+      name: 'Newform',
+      component: Newform,
+      meta: { requiresAuth: true }
     },
     {
       path: '/Shoplist/:id',
