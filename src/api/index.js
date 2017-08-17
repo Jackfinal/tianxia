@@ -157,15 +157,14 @@ export function getArea(){
   return fetch('Default.getArea')
 }
 
-export function getCoupon(data)
-{
-  return fetch('User.getCoupon', data)
-}
 export function weiXinRedirect(data)
 {
   return fetch('weixin.redirect', data, true)
 }
-
+export function orderPay(data)
+{
+  return fetch('weixin.orderPay', data, true)
+}
 //支付
 export function weiXinPay(data)
 {

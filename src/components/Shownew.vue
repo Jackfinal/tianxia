@@ -49,7 +49,7 @@
                <p>
                    <span class="span1" id="priceDesc"></span>
                </p>
-               <p class="tc pb22" style="padding:10px;"><input type="button" @click="orderby();" style="width:100%;background:#f56400 !important;color:#fff;border: 1px solid #FFF !important;" class="reg-btn msf" value="立即购买"></p>
+               <p class="tc pb22" style="padding:10px;"><input type="button" @click="orderbyshop();" style="width:100%;background:#f56400 !important;color:#fff;border: 1px solid #FFF !important;" class="reg-btn msf" value="立即购买"></p>
 
                <div align="justify" v-html="content.content">
 
@@ -66,7 +66,7 @@
       <p style="display: inline-block;margin-top: 10px;">
           价格： <span id="price" class="span1" style="font-size:16px;color:#F56400;">{{content.price}}元</span>
       </p>
-      <p class="tc pb22" style="padding:10px;"><input type="button" @click="orderby();" style="width:100%;background:#f56400 !important;color:#fff;border: 1px solid #FFF !important;" class="reg-btn msf" value="立即购买"></p>
+      <p class="tc pb22" style="padding:10px;"><input type="button" @click="orderbyshop();" style="width:100%;background:#f56400 !important;color:#fff;border: 1px solid #FFF !important;" class="reg-btn msf" value="立即购买"></p>
     </div>
     	<div align="justify" v-html="content.content">
 
@@ -88,8 +88,8 @@ import Top from './common/top'
 import banner from './common/banner'
 import Footers from './common/footer'
 import store from '../store'
-import { InfiniteScroll, Actionsheet } from 'mint-ui';
-import { GetInfo } from '../api'
+import { InfiniteScroll, Actionsheet, MessageBox } from 'mint-ui';
+import { GetInfo, orderPay  } from '../api'
 export default {
   name: 'Shownew',
   data () {
@@ -103,7 +103,9 @@ export default {
       activeName: '',
       lastp: 0,
       actions: [],
-      sheetVisible: false
+      sheetVisible: false,
+      ordertype: 1,
+      money: 0
     }
   },
   created() {
@@ -113,7 +115,7 @@ export default {
 
   },
   methods: {
-    orderby() {
+    orderbyshop() {
       if(!this.user.uid)
       {
         this.$router.push({ name: 'Login'})
@@ -123,13 +125,16 @@ export default {
         this.$router.push({ name: 'Newform', params:{ id: this.content.id } })
       }
       let title = '';
-      
+
       if( parseFloat(this.content.price) > parseFloat(this.user.money))
       {
         let money = parseFloat(this.content.price) - parseFloat(this.user.money)
         title = '在线支付：' + money + '元（扣除账户余额 '+this.user.money+'元）'
+        this.money = money
       }else {
         title = '余额支付：' + this.content.price + '元'
+        this.orderby = 2
+        this.money = this.content.price
       }console.log(title);
       this.actions = [ {name: title, method: this.lastM} ]
       this.sheetVisible = true;
@@ -170,9 +175,44 @@ export default {
 
     },
     lastM: function() {
-      this.sheetVisible = true;
-      return false;
-    }
+      orderPay({userid: this.user.uid, money: this.money, type: this.ordertype, openid: this.user.openid, id:this.content.id}).then(res=> {
+        if(typeof res == 'number')
+        {
+          MessageBox.alert('支付成功').then(action => {
+            this.$router.push( { name: 'UserOrders'} )
+          });
+        }else {
+          if (typeof WeixinJSBridge == "undefined"){
+             if( document.addEventListener ){
+                 document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+             }else if (document.attachEvent){
+                 document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                 document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+             }
+          }else{
+             this.onBridgeReady(res);
+          }
+        }
+      })
+    },
+    onBridgeReady:function(result) {
+      let id = result.id;
+      delete result.id;
+      let _this = this;
+      WeixinJSBridge.invoke(
+       'getBrandWCPayRequest',  result,
+         function(res){
+             if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+
+               MessageBox.alert('支付成功').then(action => {
+                 this.$router.push( { name: 'UserOrders'} )
+               });
+             }else {
+               MessageBox.alert('支付失败')
+             }
+         }
+     );
+   }
   },
   components: {
     banner, Top, store, Footers, InfiniteScroll, Actionsheet
