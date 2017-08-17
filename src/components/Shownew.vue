@@ -102,7 +102,7 @@ export default {
       isActiveGK: '',
       activeName: '',
       lastp: 0,
-      actions: [ {name: '余额（剩余：' + user.money + '）', methods: '' }, {name:'在线支付', methods: ''} ],
+      actions: [],
       sheetVisible: false
     }
   },
@@ -122,6 +122,16 @@ export default {
       {
         this.$router.push({ name: 'Newform', params:{ id: this.content.id } })
       }
+      let title = '';
+      
+      if( parseFloat(this.content.price) > parseFloat(this.user.money))
+      {
+        let money = parseFloat(this.content.price) - parseFloat(this.user.money)
+        title = '在线支付：' + money + '元（扣除账户余额 '+this.user.money+'元）'
+      }else {
+        title = '余额支付：' + this.content.price + '元'
+      }console.log(title);
+      this.actions = [ {name: title, method: this.lastM} ]
       this.sheetVisible = true;
 
     },
@@ -158,6 +168,10 @@ export default {
       }
       this.isActiveGK = type
 
+    },
+    lastM: function() {
+      this.sheetVisible = true;
+      return false;
     }
   },
   components: {
