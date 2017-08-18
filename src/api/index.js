@@ -142,7 +142,7 @@ export function GetOrders(data){
   return fetch('User.GetOrders',data);
 }
 export function CacelOrders(data){
-  return fetch('User.CacelOrders',data);
+  return fetch('User.CacelOrders',data, true);
 }
 //图片上传
 export function uploader(data) {

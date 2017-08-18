@@ -89,7 +89,7 @@ import banner from './common/banner'
 import Footers from './common/footer'
 import store from '../store'
 import { InfiniteScroll, Actionsheet, MessageBox } from 'mint-ui';
-import { GetInfo, orderPay  } from '../api'
+import { GetInfo, orderPay, weiXinPaySuccess  } from '../api'
 export default {
   name: 'Shownew',
   data () {
@@ -111,7 +111,6 @@ export default {
   created() {
     let id = (this.$route.params.id);
     this.loadMore(id);
-
 
   },
   methods: {
@@ -203,10 +202,14 @@ export default {
        'getBrandWCPayRequest',  result,
          function(res){
              if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+               weiXinPaySuccess( { id: id, openid: _this.user.openid, userid: _this.user.uid } ).then(res=> {
+                 store.dispatch('saveUser', res)
+                 MessageBox.alert('支付成功').then(action => {
+                   _this.$router.push( { name: 'UserOrders'} )
+                 });
 
-               MessageBox.alert('支付成功').then(action => {
-                 this.$router.push( { name: 'UserOrders'} )
-               });
+               })
+
              }else {
                MessageBox.alert('支付失败')
              }

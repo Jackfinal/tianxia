@@ -154,7 +154,7 @@ export default {
              if(res.err_msg == "get_brand_wcpay_request:ok" ) {
                _this.xx = parseFloat(_this.user.money) + parseFloat(_this.m);
                _this.user.money = _this.xx;
-               weiXinPaySuccess( { id: id, openid: _this.user.openid, userid: _this.user.uid } ).then(res=> function(){_this.xx = JSON.stringify(res);
+               weiXinPaySuccess( { id: id, openid: _this.user.openid, userid: _this.user.uid } ).then(res=> {
                  store.dispatch('saveUser', res)
                   _this.user.money = res.money;
 

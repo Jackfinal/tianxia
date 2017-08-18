@@ -66,7 +66,6 @@
                 </div>
             </div>
         </form>
-        <Footers></Footers>
   </div>
 </template>
 <style>
@@ -128,6 +127,7 @@ export default {
       }
     },
     CacelOrders() {
+
       CacelOrders({userid: this.user.uid, id: this.list[0]['id']}).then(res=> {
         if(res > 0)
         {
