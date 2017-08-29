@@ -150,7 +150,7 @@ export default {
           store.dispatch('saveUser', res);
           this.user = res
           Toast("认证成功！");
-          router.push(this.redirect)
+          this.$router.push(this.redirect)
         }else {
           Toast("认证失败！");
         }

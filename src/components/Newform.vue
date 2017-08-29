@@ -144,7 +144,7 @@
 
 <script>
 import store from '../store'
-import { InfiniteScroll, Actionsheet } from 'mint-ui';
+import { InfiniteScroll, Actionsheet, Toast } from 'mint-ui';
 import { GetInfo, addNewsForm } from '../api'
 export default {
   name: 'Newform',
@@ -182,6 +182,7 @@ export default {
       }
       addNewsForm( data ).then(res=> {
         Toast('提交成功，请等待客户联系');
+        this.$router.push( { name:'index' } )
       })
 
     },
