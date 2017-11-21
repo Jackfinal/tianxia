@@ -4,21 +4,19 @@
     <div style="height:60px;"></div>
     <div class="main">
     <form id="verifySubmit" method="POST" action="">
-    	<input type="hidden" value="oHFWHtwYqLCfKkRJLm2jnmbxQBnc" name="openid"/>
-    	<input type="hidden" value="放逐-网站建设" name="nickname"/>
       	<div class="reg" style="padding-top:40px;">
       	<div id="verify">
       	   <!-- 未认证 -->
 
       	    	<div id="verify">
       		    	<ul>
-      		        	<li><label color=green ><i>*</i>微信昵称</label>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:16px;" v-model="user.name"></span></li>
+      		        	<li><label color=green ><i>*</i>微信昵称</label>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:16px;" v-text="user.name"></span></li>
       		            <li><label for=""><i>*</i>联系人</label>&nbsp;&nbsp;&nbsp;<input type="textfield" id="mobilephone" :disabled="alldisabled" v-model="contactname" name="mobilephone" style="font-size:17px; width:150px; background-color:#F7F7F7;line-height:29px; height:29px;" > </li>
       		            <li><label for=""><i>*</i>公司名称</label>&nbsp;&nbsp;&nbsp;<input type="textfield" id="mobilephone" :disabled="alldisabled" v-model="company" name="mobilephone" style="font-size:17px; width:150px; background-color:#F7F7F7;line-height:29px; height:29px;" >  </li>
       		            <li><label for=""><i>*</i>公司地址</label>&nbsp;&nbsp;&nbsp;<input type="textfield" id="mobilephone" :disabled="alldisabled" v-model="companyaddress" name="mobilephone" style="font-size:17px; width:150px; background-color:#F7F7F7;line-height:29px; height:29px;" > </li>
 
       					      <li><label for=""><i>*</i>手机号码</label>&nbsp;&nbsp;&nbsp;<input type="textfield" :disabled="disabled" id="mobilephone" name="mobilephone" style="font-size:17px; width:150px; background-color:#F7F7F7;line-height:29px; height:29px;" minlength="11" maxlength="11" v-model="mobilephone"></li>
-      		            <li><label for=""><i>*</i>短信验证</label>&nbsp;&nbsp;&nbsp;<input type="textfield" disabled="alldisabled" id="code" v-model="code" name="code" style="width:60px; font-size:17px; background-color:#F7F7F7; line-height:29px; height:29px;" minlength="4" maxlength="4" />
+      		            <li><label for=""><i>*</i>短信验证</label>&nbsp;&nbsp;&nbsp;<input type="textfield" :disabled="alldisabled" id="code" v-model="code" name="code" style="width:60px; font-size:17px; background-color:#F7F7F7; line-height:29px; height:29px;" minlength="4" maxlength="4" />
         		            <label id="rcode" style="border-right:none; width:80px; float:right; display:block;" @click="getCode();"><i>&nbsp;&nbsp;&nbsp;</i>获取验证码</label>
       		            <label id="timer" style="border-right:none; width:80px; float:right;" v-show="timer" ><i>&nbsp;&nbsp;&nbsp;</i><span id="times" v-text="lasttime"></span>秒后获取</label></li>
       		        </ul>
@@ -73,7 +71,7 @@ export default {
       this.site = res;
       store.dispatch('saveSite', this.site)
     })
-
+console.log(this.user);
     this.redirect = (this.$route.query.redirect);
     if(!this.redirect)this.redirect = 'User'
     let code = this.getQueryString('code');
