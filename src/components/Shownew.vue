@@ -54,6 +54,8 @@
                <div align="justify" v-html="content.content">
 
                </div>
+               <div class="m_new_t clearfix"><h3 class="float-l">专家团队</h3></div>
+               <vue-img-slider style="width: 100%; height:150px;margin-top:20px" :type="'left'"  margin="'20px'" :speed="50" :imgData="demoData" :txtPos="['0%','0%']"></vue-img-slider>
 
 
            </div>
@@ -87,6 +89,7 @@
 import Top from './common/top'
 import banner from './common/banner'
 import Footers from './common/footer'
+import VueImgSlider from './common/VueImgSlider'
 import store from '../store'
 import { InfiniteScroll, Actionsheet, MessageBox } from 'mint-ui';
 import { GetInfo, orderPay, weiXinPaySuccess  } from '../api'
@@ -105,7 +108,16 @@ export default {
       actions: [],
       sheetVisible: false,
       ordertype: 1,
-      money: 0
+      money: 0,
+      demoData: [
+           {
+             img: 'http://f12.baidu.com/it/u=1981748892,3031683197&fm=72',
+             title: '图片1'
+           },
+           {
+             img: 'http://f10.baidu.com/it/u=3243370105,1125765815&fm=72',
+             title: '图片2'
+           }]
     }
   },
   created() {
@@ -144,7 +156,7 @@ export default {
       this.loading = true;
       GetInfo({id}).then(res=> {
         this.content = res
-
+        this.demoData = res.zjd
       })
     },
 
@@ -218,7 +230,7 @@ export default {
    }
   },
   components: {
-    banner, Top, store, Footers, InfiniteScroll, Actionsheet
+    banner, Top, store, Footers, InfiniteScroll, Actionsheet, VueImgSlider
   }
 }
 </script>
