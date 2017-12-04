@@ -4,8 +4,6 @@
     <div style="height:60px;"></div>
     <div class="main">
     <form id="verifySubmit" method="POST" action="">
-    	<input type="hidden" value="oHFWHtwYqLCfKkRJLm2jnmbxQBnc" name="openid"/>
-    	<input type="hidden" value="放逐-网站建设" name="nickname"/>
       	<div class="reg" style="padding-top:40px;">
       	<div id="verify">
       	   <!-- 未认证 -->
@@ -73,7 +71,7 @@ export default {
       this.site = res;
       store.dispatch('saveSite', this.site)
     })
-
+console.log(this.user);
     this.redirect = (this.$route.query.redirect);
     if(!this.redirect)this.redirect = 'User'
     let code = this.getQueryString('code');
@@ -155,7 +153,7 @@ export default {
           store.dispatch('saveUser', res);
           this.user = res
           Toast("认证成功！");
-          router.push(this.redirect)
+          this.$router.push(this.redirect)
         }else {
           Toast("认证失败！");
         }
