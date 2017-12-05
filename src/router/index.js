@@ -11,6 +11,7 @@ import UserAccount from '@/components/UserAccount'
 import UserOrders from '@/components/UserOrders'
 import Login from '@/components/Login'
 import Newform from '@/components/Newform'
+import Sign from '@/components/Sign'
 Vue.use(Router)
 
 export default new Router({
@@ -80,6 +81,12 @@ export default new Router({
       name: 'UserOrders',
       component: UserOrders,
       meta: { requiresAuth: true }
+    },
+    {
+      path: '/Sign',
+      name: 'Sign',
+      component: Sign,
+      meta: { requiresAuth: false }
     },
     {
       path: '/Clear',
