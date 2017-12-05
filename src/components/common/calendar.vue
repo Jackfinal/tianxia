@@ -1,27 +1,27 @@
 <template>
   <div id="calendar">
-    
+
     <!-- 年份 月份 -->
     <div class="month">
       <ul>
         <!--点击会触发pickpre函数，重新刷新当前日期 @click(vue v-on:click缩写) -->
         <li class="arrow" @click="pickPre(currentYear,currentMonth)">❮</li>
         <li class="year-month" @click="pickYear(currentYear,currentMonth)">
-          <span class="choose-year">{{ currentYear }}</span>
-          <span class="choose-month">{{ currentMonth }}月</span>
+          <span class="choose-year">{{ currentYear }}年{{ currentMonth }}月</span>
+          <span class="choose-month">签到日历</span>
         </li>
         <li class="arrow" @click="pickNext(currentYear,currentMonth)">❯</li>
       </ul>
     </div>
     <!-- 星期 -->
     <ul class="weekdays">
-      <li>一</li>
-      <li>二</li>
-      <li>三</li>
-      <li>四</li>
-      <li>五</li>
-      <li style="color:red">六</li>
-      <li style="color:red">日</li>
+      <li>MON</li>
+      <li>TUE</li>
+      <li>WED</li>
+      <li>THU</li>
+      <li>FRI</li>
+      <li style="background:#f08437">SAT</li>
+      <li style="background:#f08437">SUN</li>
     </ul>
     <!-- 日期 -->
     <ul class="days">
@@ -216,6 +216,9 @@ body {
   display: inline-block;
   width: 13.6%;
   text-align: center;
+  background: #fdd000;
+  color: #fff;
+  line-height: 1.5rem
 }
 
 .days {
@@ -231,7 +234,7 @@ body {
   list-style-type: none;
   display: inline-block;
   width: 14.2%;
-  height: 70px;
+  height: 3.5rem;
   text-align: center;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -242,7 +245,7 @@ body {
 .days li .active {
   padding: 6px 10px;
   border-radius: 50%;
-  background: #00B8EC;
+  background: #ff7f7f;
   color: #fff;
 }
 

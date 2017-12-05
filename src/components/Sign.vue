@@ -1,13 +1,18 @@
 <template>
-  <div>
+  <div class="sign">
     <div class="sign-banner"><img src="../assets/images/sign-banner.png" /></div>
     <div class="sign-nei">
       <div class="sign-txt">今日已签到</div>
-      <div class="sign-pace"><img :src="user.avatar" width="120" />{{user.name}}</div>
+      <div class="sign-pace"><img :src="user.avatar" />{{user.name}}</div>
       <div class="sign-score">我的积分：{{user.score}}</div>
     </div>
 
     <calendar></calendar>
+    <div class="button">
+      <a href="">签到明细</a>
+      <a href="">签到规则</a>
+    </div>
+
   </div>
 
 </template>
@@ -86,31 +91,11 @@ export default {
 </script>
 
 <style>
-.title-h3{ text-align: center; font-size: 0.3rem; font-weight: normal;background: #fff; line-height: 0.8rem;box-shadow: 0 2px 8px #ccc; margin-bottom: 0.04rem}
-.divli{ border-top: 0px solid #f4f4f4;margin-top: 1px;}
-
-.avatar-div {
-    width: 1.2rem;
-    height: 1.2rem;
-    float: right;
-}
-.uploader-input {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-.avatar {
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 50%;
-}
-.mint-cell-wrapper{ border:0px!important; background: none;}
+.sign{ background: #f6f6f6}
 .sign-txt{ text-align: center; font-size: 2rem;color: #c12434;}
-.sign-pace img{border-radius: 50%; margin-right: 10px; border: 1px solid #30b3b7;}
-.sign-pace{ text-align: center; line-height: 140px;font-size: 30px;}
-.sign-score{ font-size: 30px; text-align: center;}
-.sign-nei{ margin-top: -120px;}
+.sign-pace img{border-radius: 50%; margin-right: 10px; border: 1px solid #30b3b7; width: 20%}
+.sign-pace{ text-align: center; line-height: 6rem;font-size: 1.5rem;margin-top: 2.5rem;}
+.sign-score{ font-size: 1.5rem; text-align: center;margin: 1rem 0;}
+.sign-nei{ margin-top: -32%;}
+.button a{ width: 45%; display: inline-block; height: 2.5rem; line-height: 2.5rem;border-radius: 5%;background: #fa4747; text-align: center;color: #fff; font-size: 1.5rem; margin: .6rem;}
 </style>
