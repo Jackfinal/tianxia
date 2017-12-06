@@ -185,3 +185,14 @@ export function addNewsForm(data)
 {
   return fetch('User.addNewsForm', data, true)
 }
+
+
+//签到
+export function sign(data)
+{
+  return fetch('User.sign', data, true)
+}
+export function signlist(data)
+{
+  return fetch('User.signList', data, true)
+}

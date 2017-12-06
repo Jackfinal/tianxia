@@ -45,18 +45,20 @@
 </template>
 <script>
 
-
+import { signlist } from '../../api';
+import store from '../../store'
 export default {
   name: 'date',
 
   data () {
     return {
+      user: (typeof (store.state.user) == 'string' && store.state.user!='')?JSON.parse(store.state.user):store.state.user,
       currentDay: 1,
       currentMonth: 1,
       currentYear: 1970,
       currentWeek: 1,
       days: [],
-      arrDate: [10,15]
+      arrDate: []
     }
   },
 
@@ -66,6 +68,7 @@ export default {
 
   created () {
     this.initData(null);
+
   },
 
   methods: {
@@ -109,6 +112,7 @@ export default {
         dayobject = {day: d,isSign: this.isVerDate(d.getDate())}
         this.days.push(dayobject);
       }
+      this.signlist();
     },
     isVerDate (v) {
       return this.arrDate.includes(v)
@@ -140,6 +144,20 @@ export default {
       if(d<10) d = "0" + d;
       return y+"-"+m+"-"+d
     },
+    signlist() {
+      signlist({userid:this.user.uid,date:this.currentYear.toString()+this.currentMonth.toString()}).then(res=> {
+        this.arrDate = res.list;
+        //存issign
+        this.user.issign = res.issign;
+        this.user.guize = res.content.content;
+        this.user.mingxiday = res.day;
+        this.user.mingxiscore = res.score;
+        store.dispatch('saveUser', this.user)
+        for (let i in this.days) {
+          this.days[i].isSign = this.isVerDate(this.days[i].day.getDate());
+        }
+      })
+    }
   }
 }
 </script>

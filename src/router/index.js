@@ -86,7 +86,7 @@ export default new Router({
       path: '/Sign',
       name: 'Sign',
       component: Sign,
-      meta: { requiresAuth: false }
+      meta: { requiresAuth: true }
     },
     {
       path: '/Clear',
