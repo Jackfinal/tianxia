@@ -44,7 +44,7 @@
            </div>
        <!-- 2016-01-11  新增结束 -->
                <p style="display: inline-block;margin-top: 10px;">
-                   价格： <span id="price" class="span1" style="font-size:16px;color:#F56400;">{{content.price}}元起</span>
+                   价格： <span id="price" class="span1" style="font-size:16px;color:#F56400;">{{content.price}}元/span>
                </p>
                <p>
                    <span class="span1" id="priceDesc"></span>
@@ -54,6 +54,7 @@
                <div align="justify" v-html="content.content">
 
                </div>
+               <div class="weixinimg"><img src="http://txcm.0512iis.com/images/weixin.jpg" width="50%" /><p>欢迎关注天下财猫</p></div>
                <div class="m_new_t clearfix"><h3 class="float-l">专家团队</h3></div>
                <vue-img-slider style="width: 100%; height:150px;margin-top:20px" :type="'left'"  margin="'20px'" :speed="50" :imgData="demoData" :txtPos="['0%','0%']"></vue-img-slider>
 
@@ -234,3 +235,6 @@ export default {
   }
 }
 </script>
+<style>
+.weixinimg{ text-align: center; margin: 20px 0;}
+</style>

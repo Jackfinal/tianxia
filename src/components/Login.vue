@@ -12,8 +12,8 @@
       		    	<ul>
       		        	<li><label color=green ><i>*</i>微信昵称</label>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:16px;" v-text="user.name"></span></li>
       		            <li><label for=""><i>*</i>联系人</label>&nbsp;&nbsp;&nbsp;<input type="textfield" id="mobilephone" :disabled="alldisabled" v-model="contactname" name="mobilephone" style="font-size:17px; width:150px; background-color:#F7F7F7;line-height:29px; height:29px;" > </li>
-      		            <li><label for=""><i>*</i>公司名称</label>&nbsp;&nbsp;&nbsp;<input type="textfield" id="mobilephone" :disabled="alldisabled" v-model="company" name="mobilephone" style="font-size:17px; width:150px; background-color:#F7F7F7;line-height:29px; height:29px;" >  </li>
-      		            <li><label for=""><i>*</i>公司地址</label>&nbsp;&nbsp;&nbsp;<input type="textfield" id="mobilephone" :disabled="alldisabled" v-model="companyaddress" name="mobilephone" style="font-size:17px; width:150px; background-color:#F7F7F7;line-height:29px; height:29px;" > </li>
+      		            <li><label for="">公司名称</label>&nbsp;&nbsp;&nbsp;<input type="textfield" id="mobilephone" :disabled="alldisabled" v-model="company" name="mobilephone" style="font-size:17px; width:150px; background-color:#F7F7F7;line-height:29px; height:29px;" >  </li>
+      		            <li><label for="">公司地址</label>&nbsp;&nbsp;&nbsp;<input type="textfield" id="mobilephone" :disabled="alldisabled" v-model="companyaddress" name="mobilephone" style="font-size:17px; width:150px; background-color:#F7F7F7;line-height:29px; height:29px;" > </li>
 
       					      <li><label for=""><i>*</i>手机号码</label>&nbsp;&nbsp;&nbsp;<input type="textfield" :disabled="disabled" id="mobilephone" name="mobilephone" style="font-size:17px; width:150px; background-color:#F7F7F7;line-height:29px; height:29px;" minlength="11" maxlength="11" v-model="mobilephone"></li>
       		            <li><label for=""><i>*</i>短信验证</label>&nbsp;&nbsp;&nbsp;<input type="textfield" :disabled="alldisabled" id="code" v-model="code" name="code" style="width:60px; font-size:17px; background-color:#F7F7F7; line-height:29px; height:29px;" minlength="4" maxlength="4" />
@@ -61,7 +61,8 @@ export default {
       code: '',
       redirect: '',
       alldisabled: false,
-      button: '立即认证'
+      button: '立即认证',
+      fuid: 0
     }
   },
   created() {
@@ -71,10 +72,16 @@ export default {
       this.site = res;
       store.dispatch('saveSite', this.site)
     })
-console.log(this.user);
+
     this.redirect = (this.$route.query.redirect);
     if(!this.redirect)this.redirect = 'User'
     let code = this.getQueryString('code');
+    let uid = this.GetQueryString1('uid');
+
+    if(uid)
+    {
+      this.fuid = uid;
+    }
     if(this.user.ismobile == 1 && this.user.phone)
     {
       this.alldisabled = true;
@@ -82,9 +89,10 @@ console.log(this.user);
       this.button = '解除认证'
 
     }
-    if(!code)
+    if(!code && !this.user)
     {
-      RedirectWeixin();
+      RedirectWeixin({uid:uid});
+      return false;
     }
     if(this.user.uid)
     {
@@ -127,14 +135,14 @@ console.log(this.user);
     		Toast("联系人不能为空！");
     		return false;
     	}
-      if (this.company == "") {
-    		Toast("公司名称不能为空！");
-    		return false;
-    	}
-      if (this.companyaddress == "") {
-    		Toast("公司地址不能为空！");
-    		return false;
-    	}
+      // if (this.company == "") {
+    	// 	Toast("公司名称不能为空！");
+    	// 	return false;
+    	// }
+      // if (this.companyaddress == "") {
+    	// 	Toast("公司地址不能为空！");
+    	// 	return false;
+    	// }
       if (this.code == "") {
     		Toast("验证码不能为空！");
     		return false;
@@ -145,7 +153,8 @@ console.log(this.user);
         company: this.company,
         companyaddress: this.companyaddress,
         code: this.code,
-        userid: this.user.uid
+        userid: this.user.uid,
+        fuid: this.fuid
       }
       saveField(data).then(res=> {
         if(res != -1)
@@ -153,6 +162,9 @@ console.log(this.user);
           store.dispatch('saveUser', res);
           this.user = res
           Toast("认证成功！");
+          if(this.redirect.toLowerCase().indexOf('share') > 0){
+            this.redirect = '/';
+          }
           this.$router.push(this.redirect)
         }else {
           Toast("认证失败！");
@@ -207,6 +219,23 @@ console.log(this.user);
       var r = window.location.search.substr(1).match(reg);
       if (r != null) return unescape(r[2]);
       return null;
+    },
+    GetQueryString1 (name)
+    {
+        var after = window.location.hash.split("?")[1];
+        if(after)
+        {
+            var reg = new RegExp("(^|)"+ name +"=([^&]*)(&|$)");
+            var r = decodeURIComponent(after).match(reg);
+            if(r != null)
+            {
+                return  decodeURIComponent(r[2]);
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
   },
   components: {

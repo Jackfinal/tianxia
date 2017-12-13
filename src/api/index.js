@@ -92,12 +92,12 @@ async function getData(service, datas, loading)
   })
 }
 //暴露外围函数
-export function RedirectWeixin()
+export function RedirectWeixin(data)
 {
   let user = store.state.user;
   if(!user.id)
   {
-    var ret = fetch('Weixin.Redirect_weixin',{},true);
+    var ret = fetch('Weixin.Redirect_weixin',data,true);
     ret.then(res => {
       window.location.href=res;
     })
@@ -195,4 +195,11 @@ export function sign(data)
 export function signlist(data)
 {
   return fetch('User.signList', data, true)
+}
+export function share(data)
+{
+  return fetch('Index.Share', data, true)
+}
+export function ShareList(data){
+  return fetch('User.ShareList',data);
 }

@@ -13,21 +13,21 @@
     <div class="tuijianbg">
     	<ul class="tuijian">
     		<li>
-    			<img src="../assets/images/pic1.jpg" class="img-responsive"></li>
+    			<img src="http://txcm.0512iis.com/images/pic1.jpg" class="img-responsive"></li>
     		<li>
           <router-link :to="{ name: 'Shoplist', params: { id:  1 }}">
-    			<img src="../assets/images/pic2.jpg" class="img-responsive"></router-link>
+    			<img src="http://txcm.0512iis.com/images/pic2.jpg" class="img-responsive"></router-link>
         </li>
     		<li><router-link :to="{ name: 'Shoplist', params: { id:  3 }}">
-    			<img src="../assets/images/pic3.jpg" class="img-responsive"></router-link></li>
+    			<img src="http://txcm.0512iis.com/images/pic3.jpg" class="img-responsive"></router-link></li>
     		<div class="clear">
     		</div>
     		<li><router-link :to="{ name: 'Shoplist', params: { id:  4 }}">
-    			<img src="../assets/images/pic4.jpg" class="img-responsive"></router-link></li>
+    			<img src="http://txcm.0512iis.com/images/pic4.jpg" class="img-responsive"></router-link></li>
     		<li><router-link :to="{ name: 'Shoplist', params: { id:  12 }}">
-    			<img src="../assets/images/pic5.jpg" class="img-responsive"></router-link></li>
-    		<li><router-link :to="{ name: 'Shoplist'}">
-    			<img src="../assets/images/pic6.jpg" class="img-responsive"></router-link></li>
+    			<img src="http://txcm.0512iis.com/images/pic5.jpg" class="img-responsive"></router-link></li>
+    		<!-- <li><router-link :to="{ name: 'Shoplist'}">
+    			<img src="http://txcm.0512iis.com/images/pic6.jpg" class="img-responsive"></router-link></li> -->
     		<div class="clear">
     		</div>
     	</ul>
@@ -40,7 +40,7 @@
     		<h3 class="float-l">我们的服务</h3>
     	</div>
       <navbar v-model="selected">
-        <tab-item id="1"><span>注册代账</span></tab-item>
+        <tab-item id="1"><span>代理记账</span></tab-item>
         <tab-item id="2"><span>天猫转让</span></tab-item>
         <tab-item id="3"><span>商标注册</span></tab-item>
         <tab-item id="4"><span>法律咨询</span></tab-item>

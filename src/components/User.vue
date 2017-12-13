@@ -30,19 +30,19 @@
               <tr>
                 <td align="center" style="width:33.3%;">
                   <router-link :to="{ name: 'UserAccount', params: { id: 0 } }">
-	                  <img src="../assets/images/mycount.png"/>
+	                  <img src="http://txcm.0512iis.com/images/mycount.png"/>
 	                  <h3>我的账户</h3>
                   </router-link>
                 </td>
                 <td align="center" width="33.3%">
                 	<router-link :to="{ name: 'UserOrders' }">
-                  	<img src="../assets/images/myorder.png"/>
+                  	<img src="http://txcm.0512iis.com/images/myorder.png"/>
                   	<h3>我的订单</h3>
                   </router-link>
                 </td>
                 <td align="center" width="33.3%">
 	                <router-link :to="{ name: 'UserScore' }">
-	                  <img src="../assets/images/mycoupon.png"/>
+	                  <img src="http://txcm.0512iis.com/images/mycoupon.png"/>
 	                  <h3>我的积分</h3>
 	                </router-link>
                 </td>
@@ -50,14 +50,14 @@
               <tr>
 			  <td align="center" width="33.3%">
                 <router-link :to="{ name: 'UserAccount' , params: { id:  1 } }">
-                  <img src="../assets/images/operate.png"/>
+                  <img src="http://txcm.0512iis.com/images/operate.png"/>
                   <h3>消费记录</h3>
                   </router-link>
                   </td>
 
                 <td align="center" width="33.3%">
                   <router-link :to="{ name: 'Page', params: { id:  6 }}" >
-                  <img src="../assets/images/aboutus.png"/>
+                  <img src="http://txcm.0512iis.com/images/aboutus.png"/>
                   <h3>关于我们</h3>
                   </router-link>
                 </td>

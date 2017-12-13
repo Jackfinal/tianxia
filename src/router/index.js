@@ -12,6 +12,8 @@ import UserOrders from '@/components/UserOrders'
 import Login from '@/components/Login'
 import Newform from '@/components/Newform'
 import Sign from '@/components/Sign'
+import Share from '@/components/Share'
+import ShareList from '@/components/ShareList'
 Vue.use(Router)
 
 export default new Router({
@@ -86,6 +88,18 @@ export default new Router({
       path: '/Sign',
       name: 'Sign',
       component: Sign,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/Share',
+      name: 'Share',
+      component: Share,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/ShareList',
+      name: 'ShareList',
+      component: ShareList,
       meta: { requiresAuth: true }
     },
     {

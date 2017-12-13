@@ -1,6 +1,6 @@
 <template>
   <div class="sign">
-    <div class="sign-banner"><img src="../assets/images/sign-banner.png" /></div>
+    <div class="sign-banner"><img src="http://txcm.0512iis.com/images/sign-banner.png" /></div>
     <div class="sign-nei">
       <div class="sign-txt" v-if=" user.isSign ">今日已签到</div>
       <div class="sign-txt" @click="sign" v-else>签到</div>
@@ -46,7 +46,7 @@ import { GetUser, sign } from '../api';
 import { Toast } from 'mint-ui';
 
 export default {
-  name: 'User',
+  name: 'Sign',
   data() {
     var d = new Date(2017)
     return {
@@ -62,28 +62,28 @@ export default {
     calendar
   },
   created() {
-    //this.GetInfo();
+    this.GetInfo();console.log(this.user);
   },
   methods: {
-    showd() {
-      this.popupVisible = 1
-      console.log(this.visible);
-      /*this.user = {}
-      this.user.uid = 22
+    GetInfo() {
       GetUser({userid:this.user.uid}).then(res=> {
         this.user = res;
         store.dispatch('saveUser', res)
-      })*/
+      })
     },
     sign() {
       sign( {userid: this.user.uid} ).then(res=>{
         if(res > 0){
           Toast('签到成功！');
           this.user.isSign = true;
-          store.dispatch('saveUser', this.user)
+          this.user.experience += 1;
+          this.user.score += 1;
+          store.dispatch('saveUser', this.user);
+          setTimeout("location.reload()",3000);
         }else {
           Toast('签到失败！');
         }
+
       })
     },
     popupVisible() {

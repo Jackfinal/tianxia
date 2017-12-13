@@ -2,9 +2,9 @@
 
     <div class="header_m">
     	<div class="top clearfix">
-    		<div class="topleft"><a href="/"><img src="../../assets/images/logo.jpg"></a></div>
+    		<div class="topleft"><a href="/"><img src="http://txcm.0512iis.com/images/logo.jpg"></a></div>
     		<div class="topright"  @click="showNav(1)">
-    			<a href="javascript:void(0)"><img src="../../assets/images/btn.jpg" class="js_menuBtn"></a>
+    			<a href="javascript:void(0)"><img src="http://txcm.0512iis.com/images/btn.jpg" class="js_menuBtn"></a>
     		</div>
     	</div>
 
@@ -30,7 +30,7 @@
 
       	</div>
       	<a href="javascript:void(0)" class="close js_close" @click="showNav(2)">
-      		<img src="../../assets/images/closebtn.png" width="43" height="43">	</a>
+      		<img src="http://txcm.0512iis.com/images/closebtn.png" width="43" height="43">	</a>
         </div>
         <div id="fade" :style="fadeCss" @click="showNav(2)" class="black_overlay" v-show="fade"></div>
     </div>
