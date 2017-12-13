@@ -137,14 +137,18 @@ export default {
         //this.$router.push({ name: 'Newform', params:{ id: this.content.id } })
       }
       let title = '';
+      let titled = '';
+      if(this.user.experience >0){
+        titled = '，积分：'+this.user.experience;
+      }
 
       if( parseFloat(this.content.price) > parseFloat(this.user.money))
       {
         let money = parseFloat(this.content.price) - parseFloat(this.user.money)
-        title = '在线支付：' + money + '元（扣除账户余额 '+this.user.money+'元）'
+        title = '在线支付：' + money + '元（余额 '+this.user.money+'元'+titled+'）'
         this.money = money
       }else {
-        title = '余额支付：' + this.content.price + '元'
+        title = '余额支付：' + this.content.price + '元'+titled
         this.orderby = 2
         this.money = this.content.price
       }console.log(title);
