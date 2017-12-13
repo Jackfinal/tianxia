@@ -44,7 +44,7 @@
            </div>
        <!-- 2016-01-11  新增结束 -->
                <p style="display: inline-block;margin-top: 10px;">
-                   价格： <span id="price" class="span1" style="font-size:16px;color:#F56400;">{{content.price}}元/span>
+                   价格： <span id="price" class="span1" style="font-size:16px;color:#F56400;">{{content.price}}{{content.extend.dan}}</span>
                </p>
                <p>
                    <span class="span1" id="priceDesc"></span>
@@ -134,7 +134,7 @@ export default {
       }
       if(this.content.catid == 1)
       {
-        this.$router.push({ name: 'Newform', params:{ id: this.content.id } })
+        //this.$router.push({ name: 'Newform', params:{ id: this.content.id } })
       }
       let title = '';
 

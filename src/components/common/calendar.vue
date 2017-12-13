@@ -70,7 +70,6 @@ export default {
     this.initData(null);
 
   },
-
   methods: {
     initData: function(cur) {
       var leftcount=0; //存放剩余数量
@@ -134,16 +133,6 @@ export default {
     pickYear: function(year, month) {
       alert(year + "," + month);
     },
-
-    // 返回 类似 2016-01-02 格式的字符串
-    formatDate: function(year,month,day){
-      var y = year;
-      var m = month;
-      if(m<10) m = "0" + m;
-      var d = day;
-      if(d<10) d = "0" + d;
-      return y+"-"+m+"-"+d
-    },
     signlist() {
       signlist({userid:this.user.uid,date:this.currentYear.toString()+this.currentMonth.toString()}).then(res=> {
         this.arrDate = res.list;
@@ -157,6 +146,16 @@ export default {
           this.days[i].isSign = this.isVerDate(this.days[i].day.getDate());
         }
       })
+    },
+
+    // 返回 类似 2016-01-02 格式的字符串
+    formatDate: function(year,month,day){
+      var y = year;
+      var m = month;
+      if(m<10) m = "0" + m;
+      var d = day;
+      if(d<10) d = "0" + d;
+      return y+"-"+m+"-"+d
     }
   }
 }

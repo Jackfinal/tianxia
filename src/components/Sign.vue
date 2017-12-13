@@ -17,7 +17,7 @@
     <div class="qiandao" v-show="show" @click="show = false">
       <div class="cent">
       <div class="titlet">签到规则</div>
-      <div class="contt" v-html="user.guize">
+      <div class="contt" v-html="user.content.content">
 
       </div>
     </div>
@@ -42,7 +42,7 @@
 import '../assets/css/style2.css'
 import calendar from './common/calendar'
 import store from '../store'
-import { GetUser, sign } from '../api';
+import { GetUser, sign, signlist } from '../api';
 import { Toast } from 'mint-ui';
 
 export default {
@@ -54,7 +54,7 @@ export default {
       date: '',
       show: false,
       show1: false,
-      content: ''
+      content: '',
     }
 
   },
@@ -97,6 +97,7 @@ export default {
       return l[0]+ '年' + l[1] + '月' + l[2] + '日'
     }
   }
+
 
 
 }
