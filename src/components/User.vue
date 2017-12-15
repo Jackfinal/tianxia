@@ -70,11 +70,13 @@
           </table>
 
         </div>
+        <div class="weixinimg"><img src="http://txcm.0512iis.com/images/weixin.jpg" width="50%" /><p>关注公众号享更多好礼</p></div>
         <Footers></Footers>
   </div>
 </template>
 <style>
 .user img { display:inline;}
+.weixinimg{ text-align: center; margin: 20px 0;}
 </style>
 <script>
 import '../assets/css/style2.css'

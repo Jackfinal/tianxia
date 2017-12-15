@@ -185,6 +185,11 @@ export function addNewsForm(data)
 {
   return fetch('User.addNewsForm', data, true)
 }
+//兑换积分
+export function exchange(data)
+{
+  return fetch('User.exchange', data, true)
+}
 
 
 //签到

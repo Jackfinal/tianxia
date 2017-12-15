@@ -26,6 +26,8 @@
     			<img src="http://txcm.0512iis.com/images/pic4.jpg" class="img-responsive"></router-link></li>
     		<li><router-link :to="{ name: 'Shoplist', params: { id:  12 }}">
     			<img src="http://txcm.0512iis.com/images/pic5.jpg" class="img-responsive"></router-link></li>
+          <li><router-link :to="{ name: 'User'}">
+      			<img src="http://txcm.0512iis.com/images/pic7.jpg" class="img-responsive"></router-link></li>
     		<!-- <li><router-link :to="{ name: 'Shoplist'}">
     			<img src="http://txcm.0512iis.com/images/pic6.jpg" class="img-responsive"></router-link></li> -->
     		<div class="clear">

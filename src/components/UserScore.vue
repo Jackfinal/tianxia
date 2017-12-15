@@ -22,10 +22,10 @@
           </tr>
           <tr>
             <td align="center" style="width: auto;">
-              <p style="line-height:25px; font-size:14px;">当前积分<br><span id="myMoney" v-text="user.experience">0</span>分</p>
+              <p style="line-height:25px; font-size:14px;">积分<br><span id="myMoney" v-text="user.experience">0</span>分</p>
             </td>
             <td align="center" style="width: auto;">
-              <p style="line-height:25px; font-size:14px;">可兑换积分<br><span id="canWithdraw" v-text="user.score">0</span>分</p>
+              <p style="line-height:25px; font-size:14px;" @click="duihuan">兑换积分</p>
             </td>
           </tr>
         </tbody>
@@ -59,6 +59,9 @@
 
         </tbody>
       </table>
+      <div class="contentlist" v-html="content">
+
+      </div>
 
     </div>
         <Footers></Footers>
@@ -72,8 +75,8 @@ import '../assets/css/style2.css'
 import Top from './common/top'
 import Footers from './common/footer'
 import store from '../store'
-import { GetScore } from '../api';
-import { InfiniteScroll, Toast } from 'mint-ui';
+import { GetScore,exchange } from '../api';
+import { InfiniteScroll, Toast,MessageBox } from 'mint-ui';
 export default {
   name: 'UserScore',
   data() {
@@ -83,7 +86,8 @@ export default {
       list: {},
       loading: false,
       num: 10,
-      flag: false
+      flag: false,
+      content: ''
     }
 
   },
@@ -98,7 +102,8 @@ export default {
       if(this.flag)return false;
       GetScore({ page: this.page, userid: this.user.uid, limit: this.num }).then(res=> {
         this.loading = false;
-        if(res == '')
+        this.content = res.content;
+        if(res.list == '')
         {
           Toast({
             message: '没有了！',
@@ -110,13 +115,40 @@ export default {
         }
         if(this.page == 1)
         {
-          this.list = res;
+          this.list = res.list;
         }else {
-          this.list = this.list.concat(res);
+          this.list = this.list.concat(res.list);
         }
         this.page += 1
       })
     },
+    duihuan(){
+      MessageBox.prompt('请输入兑换的积分').then(({ value, action }) => {
+        let m = parseInt(value);
+        this.m = m
+        if(action == 'confirm')
+        {
+          if(parseInt(this.user.experience) < m){
+            Toast('积分不足');
+            return false;
+          }
+          exchange({userid: this.user.uid,m:m}).then(res=> {
+            if(res > 0)
+            {
+              this.user.experience = parseInt(this.user.experience) - m;
+              this.user.score =this.user.experience;
+              store.dispatch('saveUser', this.user)
+              Toast('兑换成功！');
+
+            }else{
+              Toast('兑换失败！');
+            }
+          })
+
+
+        }
+      });
+    }
 
 
   }

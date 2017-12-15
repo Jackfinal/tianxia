@@ -3,7 +3,8 @@
     <Top></Top>
     <banner></banner>
     <div class="m_new_t clearfix">
-      <h3 class="float-l">{{content.catname}}</h3>
+      <h3 class="float-l" v-if="content.catid == 1">{{content.title}}</h3>
+      <h3 class="float-l" v-else>{{content.catname}}</h3>
     </div>
     <div class="abtextbox" style="padding-top:10px;" v-html="info.content">
     </div>
@@ -145,10 +146,10 @@ export default {
       if( parseFloat(this.content.price) > parseFloat(this.user.money))
       {
         let money = parseFloat(this.content.price) - parseFloat(this.user.money)
-        title = '在线支付：' + money + '元（余额 '+this.user.money+'元'+titled+'）'
+        title = '在线支付：' + money + '元（余额 '+this.user.money+'元)'
         this.money = money
       }else {
-        title = '余额支付：' + this.content.price + '元'+titled
+        title = '余额支付：' + this.content.price + '元'
         this.orderby = 2
         this.money = this.content.price
       }console.log(title);
