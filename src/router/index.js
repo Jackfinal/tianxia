@@ -88,7 +88,7 @@ export default new Router({
       path: '/Sign',
       name: 'Sign',
       component: Sign,
-      meta: { requiresAuth: true }
+      meta: { requiresAuth: false }
     },
     {
       path: '/Share',
@@ -105,9 +105,9 @@ export default new Router({
     {
       path: '/Clear',
       name: 'Clear',
-      redirect: to => {
+      redirect: to => {console.log(1);
         localStorage.removeItem('user');
-        return '/'
+        //return '/'
       }
     }
   ]

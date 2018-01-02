@@ -47,9 +47,9 @@
             <tbody>
                <tr>
                  <td style="width: auto;">
-                   <div class="wdzh_btnn">
+                   <!--<div class="wdzh_btnn">
                      <button class="yysjs_btn" type="button" @click="ApplyMoney()" style="font-family: Microsoft YaHei; ">申请提现（限一天一次）</button>
-                   </div>
+                   </div>-->
                  </td>
                  <td width="30%" style="width: auto;">
                    <div class="wdzh_btnn">

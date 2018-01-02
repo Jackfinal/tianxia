@@ -79,10 +79,10 @@ export default {
         date = new Date(cur);
       } else {
         var now=new Date();
-        var d = new Date(this.formatDate(now.getFullYear() , now.getMonth() , 1));
-        d.setDate(42);
+        var d = new Date(this.formatDate(now.getFullYear() , now.getMonth()+1 , 1));
+        //d.setDate(31);
         date = new Date(this.formatDate(d.getFullYear(),d.getMonth() + 1,1));
-      }
+      }console.log(date)
       this.currentDay = date.getDate();
       this.currentYear = date.getFullYear();
       this.currentMonth = date.getMonth() + 1;
@@ -134,7 +134,12 @@ export default {
       alert(year + "," + month);
     },
     signlist() {
-      signlist({userid:this.user.uid,date:this.currentYear.toString()+this.currentMonth.toString()}).then(res=> {
+      let month = this.currentMonth.toString();
+      if(this.currentMonth.toString() < 10)
+      {
+        month = '0'+ month;
+      }
+      signlist({userid:this.user.uid,date:this.currentYear.toString()+ month}).then(res=> {
         this.arrDate = res.list;
         //存issign
         this.user.issign = res.issign;
